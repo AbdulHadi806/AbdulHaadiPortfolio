@@ -1,0 +1,70 @@
+.container {
+    padding: 63px 0 10px 0;
+}
+.bg_img {
+    width: 116%;
+    height: 310px;
+    top: -187px;
+    left: -55px;
+    background: #2FBF71;
+    border-radius: 50%;
+  }
+.sideBar_logo {
+    position: relative;
+    z-index: 9;
+}
+.sideBar_top {
+    padding: 0 0 40px 0;
+}
+.sideBar_logo img {
+    border-radius: 50%;
+    border: 6px solid #ffffff;
+
+}
+.sideBarTopTitle {
+    font-size: 14px;
+    color: #4c4c54;
+    letter-spacing: 4px;
+}
+.Links {
+  color: #525259;
+  text-decoration: none;
+  position: relative;
+  line-height: 35px;
+  width: 306px;
+
+}
+.navigationList {
+    transition: .1s all ease-in-out;
+    line-height: 67px;
+    padding-left: 20px;
+    border: 1px solid transparent;
+}
+.navigationList:hover {
+    background-color: rgb(63, 59, 59);
+    border: 1px solid rgb(135, 133, 133);
+}
+.navigationList:hover a{
+    color: #fff;
+}
+.Links::after {
+    content: "";
+    width: 250px;
+    color: #efeff8;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    height: 1px;
+}
+.iconsSetting {
+    font-size: 20px;
+}
+.iconsSetting:hover {
+    color: #000;
+}
+.socialMediaRow {
+    padding-top: 60px;
+}
+.socialMediaRow ul {
+    gap: 20px;
+}

@@ -1,0 +1,45 @@
+.container {
+    max-width: 1392px;
+    margin: 0 auto;
+}
+.myName {
+    display: block;
+    font-size: 67px;
+    font-weight: 700;
+    color: #000;
+    line-height: 70px;
+    padding-bottom: 20px;
+}
+.helloIAm {
+    color: #000;
+    line-height: 70px;
+    font-weight: 600;
+}
+.aboutMe {
+    color: #555555;
+    line-height: 30px;
+    padding-top: 20px;
+    max-width: 430px;
+}
+.goPortfolio {
+    background-color: #2fbf71;
+    width: 206px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px;
+    align-items: center;
+    transition: .3s all ease-in;
+    border: 1px solid #000;
+}
+.goPortfolio:hover .linkBut{
+    color: #000 !important;
+}
+.goPortfolio:hover{
+    background-color: transparent;
+    border: 1px solid #000;
+    box-shadow: initial;
+}
+.leftSide {
+    padding-top: 50px;
+}

@@ -1,0 +1,11 @@
+.sideBarOuter {
+    background: #f7f7ff;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.helloSectionOuter {
+    padding: 112px 0 100px 0;
+}
