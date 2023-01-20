@@ -4,5 +4,5 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Soon will make it live also.
 
 
-<img width=550 rc="https://user-images.githubusercontent.com/113926529/213811230-54224dd5-f7d9-4bfd-97b2-603fc8b94302.png" />
+<img width=550 src="https://user-images.githubusercontent.com/113926529/213811230-54224dd5-f7d9-4bfd-97b2-603fc8b94302.png" />
 
