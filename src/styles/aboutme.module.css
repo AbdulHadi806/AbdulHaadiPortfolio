@@ -19,10 +19,9 @@
     background-color: #2fbf71;
     width: 109px;
     height: 37px;
-    display: flex;
-    justify-content: center;
+    cursor: pointer;
     box-shadow: 5px 5px #000;
-    align-items: center;
+    line-height: 2;
     transition: .3s all ease-in;
     border: 1px solid transparent;
     color: #fff;
@@ -39,6 +38,9 @@
 }
 .links {
     color: #fff;
+    width: 100%;
+    transition: .3s all ease-in-out;
+    height: 100%;
 }
 .titleRow {
     max-width: 747px;

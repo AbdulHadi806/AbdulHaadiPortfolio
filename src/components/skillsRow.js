@@ -29,7 +29,7 @@ const Skillsrow = () => {
       <p style={{ color: '#555555', paddingTop: '15px' }}>
         {data.skills.description}
       </p>
-      <div className={styles.skillsInner}>
+      <div className={styles.skillsInner} style={{maxWidth: "1344px"}}>
         {data.skills.expertise.map((item) => {
           return (
             <div style={{ paddingTop: '15px' }} key={Math.random()}>
@@ -41,7 +41,7 @@ const Skillsrow = () => {
               <div class="progress">
                 <div
                   className="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                  role="progressbar"
+                  role="progressbar" animated
                   style={{ width: item.experince }}
                   aria-valuenow="75"
                   aria-valuemin="0"

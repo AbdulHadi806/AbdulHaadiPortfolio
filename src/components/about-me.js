@@ -70,13 +70,13 @@ export default function Aboutme() {
           <p className={styles.aboutMeDecription}>{data.AboutMe.description}</p>
         </div>
         <div className={`d-flex ${styles.buttonRow}`}>
-          <div className={`${styles.btns}`}>
-            <Link href="#" className={`text-decoration-none ${styles.links}`}>
+          <div className={`text-center ${styles.btns}`}>
+            <Link href="#" className={`text-decoration-none d-block ${styles.links}`}>
               {data.AboutMe.contactBtn}
             </Link>
           </div>
-          <div className={`${styles.btns}`}>
-            <Link href="#" className={`text-decoration-none ${styles.links}`}>
+          <div className={`text-center ${styles.btns}`}>
+            <Link href="#" className={`text-decoration-none d-block ${styles.links}`}>
               {data.AboutMe.portfolioBtn}
             </Link>
           </div>

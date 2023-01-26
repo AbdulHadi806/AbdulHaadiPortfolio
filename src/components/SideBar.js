@@ -66,7 +66,7 @@ function SideBar() {
       <nav style={{ "width": "244px" }}>
         <ul className='px-0'>
           {navigation && navigation.map(item => {
-            return <li key={Math.random()} className={styles.navigationList}><Link href={"/" + item.link} className={`text-uppercase ${styles.Links}`}>
+            return <li key={Math.random()} className={styles.navigationList}><Link href={"/" + item.link} className={`text-uppercase d-inline-block w-100 h-100 ${styles.Links}`}>
               <FontAwesomeIcon icon={item.icon} className={styles.iconsSetting} /> {item.link}</Link></li>
 
           })}

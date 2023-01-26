@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-function WhatIdo() {
+function Services() {
   const { data, error } = useSWR('/api/portfolio', fetcher)
   if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
@@ -58,4 +58,4 @@ function WhatIdo() {
   )
 }
 
-export default WhatIdo
+export default Services
