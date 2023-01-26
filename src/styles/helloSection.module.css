@@ -30,7 +30,10 @@
     box-shadow: 5px 5px;
     align-items: center;
     transition: .3s all ease-in;
-    border: 1px solid #000;
+    border: 1px solid transparent;
+}
+.linkBut {
+    transition: .2s all ease-in-out;
 }
 .goPortfolio:hover .linkBut{
     color: #000 !important;

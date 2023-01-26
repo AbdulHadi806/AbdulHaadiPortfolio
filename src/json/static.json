@@ -1,0 +1,43 @@
+{
+    "AboutMe": {
+    "titleMain": "ABOUT ME.",
+    "titleSecondary": "I'm a experienced Freelancer Front-end Developer.",
+    "description": "I'm a experienced Freelancer Front-end Developer. I'm from Pakistan. I code and create web elements for amazing people around the world. I like to work with new people. New people new Experiences.",
+    "contactBtn": "Contact Me",
+    "portfolioBtn": "Portfolio",
+    "arrowimg": "/images/Arrow-aboutUS.png",
+    "img1": "/images/hello-img.png",
+    "img2": "/images/hello-img.png",
+    "img3": "/images/hello-img.png",
+    "img4": "/images/hello-img.png"
+    },
+    "skills": {
+        "heading": "My SKILLS",
+        "arrowimg": "/images/Arrow-aboutUS.png",
+        "description": "I am a experince front web developer. I also have photoshop design experince as well. I create for amazing people. I work on differnet type of web technologies.",
+        "expertise": [
+            {
+                "skill": "HTML/CSS",
+                "experince": "93%"
+            },
+           
+            {
+                "skill":"React.js",
+                "experince": "73%"
+            }, 
+            {
+                "skill": "VANILLA JAVASCRIPT",
+                "experince": "87%"
+            },
+            {
+                "skill": "Next.js",
+                "experince": "65%"
+            },
+            {
+                "skill" : "Graphic Desiging with Photoshop",
+                "experince": "52%"
+            }
+        ]
+    },
+    "WhatIDo": ["PSD/XD/FIGMA to HTML/Bootstrap/Tailwind CSS", "React.js Web Applications", "Next.js Web Applications","SEO by Yoast", "Web Designing", "WireFraming"]
+}

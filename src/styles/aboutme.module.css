@@ -1,0 +1,45 @@
+.imges {
+    border-radius: 30px;
+    margin-top: 7px;
+    width: 100%;
+}
+.imgColLeft {
+    margin-top: -74px;
+}
+.aboutMeDecription {
+    font-size: 18px;
+    padding-top: 20px;
+    color: #555555;
+}
+.buttonRow {
+    padding-top: 52px;
+    gap: 30px;
+}
+.btns {
+    background-color: #2fbf71;
+    width: 109px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px #000;
+    align-items: center;
+    transition: .3s all ease-in;
+    border: 1px solid transparent;
+    color: #fff;
+    text-decoration: none;
+}
+.btns:hover {
+    background-color: transparent;
+    border: 1px solid #000;
+    box-shadow: initial;
+    color: #000;
+}
+.btns:hover a {
+    color: #000;
+}
+.links {
+    color: #fff;
+}
+.titleRow {
+    max-width: 747px;
+}

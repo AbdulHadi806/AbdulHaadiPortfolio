@@ -1,5 +1,5 @@
 .container {
-    padding: 63px 0 10px 0;
+    height: 100%;
 }
 .bg_img {
     width: 116%;
@@ -25,6 +25,7 @@
     font-size: 14px;
     color: #4c4c54;
     letter-spacing: 4px;
+    z-index: 9;
 }
 .Links {
   color: #525259;

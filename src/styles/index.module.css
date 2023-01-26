@@ -4,8 +4,28 @@
     position: fixed;
     top: 0;
     left: 0;
+    padding: 63px 0 10px 0;
     bottom: 0;
 }
 .helloSectionOuter {
     padding: 112px 0 100px 0;
+}
+.aboutme {
+    padding: 150px 0 100px 0;
+}
+.separation {
+    padding-bottom: 80px;
+    position: relative;
+}
+.separation:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 84%;
+    bottom: 0;
+    margin: auto;
+    height: 1px;
+    opacity: 0.1;
+    background: #0b0b13;
 }
