@@ -7,7 +7,6 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Aboutme() {
   const { data, error } = useSWR('/api/portfolio', fetcher)
-  console.log(data)
 
   if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
@@ -19,12 +18,14 @@ export default function Aboutme() {
             <Image
               src={data.AboutMe.img1}
               width={270}
+              alt="My Image"
               height={300}
               className={`img-fluid ${styles.imges}`}
             />
             <Image
               src={data.AboutMe.img1}
               width={270}
+              alt="My Image"
               height={300}
               className={`img-fluid ${styles.imges}`}
             />
@@ -33,6 +34,7 @@ export default function Aboutme() {
             <Image
               src={data.AboutMe.img1}
               width={270}
+              alt="My Image"
               height={300}
               className={`img-fluid ${styles.imges}`}
             />
@@ -40,6 +42,7 @@ export default function Aboutme() {
               src={data.AboutMe.img1}
               width={270}
               height={300}
+              alt="My Image"
               className={`img-fluid ${styles.imges}`}
             />
           </div>
@@ -47,10 +50,18 @@ export default function Aboutme() {
       </div>
       <div className="col-md-12 col-lg-7 text-start">
         <div className={styles.titleRow}>
-          <h2 className='fw-normal' style={{color: '#0b0b13', fontSize: '46px', letterSpacing: "7px"}}>
+          <h2
+            className="fw-normal"
+            style={{ color: '#0b0b13', fontSize: '46px', letterSpacing: '7px' }}
+          >
             {data.AboutMe.titleMain}{' '}
             <span style={{ marginLeft: '-7px', display: 'block' }}>
-              <Image src={data.AboutMe.arrowimg} width={56} height={16} />
+              <Image
+                src={data.AboutMe.arrowimg}
+                width={80}
+                height={16}
+                alt="arrow"
+              />
             </span>
           </h2>
           <h3 style={{ fontSize: '24px', fontWeight: '600' }}>

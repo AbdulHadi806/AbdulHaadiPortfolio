@@ -36,7 +36,7 @@ function SideBar() {
   },
   {
     icon: faLinkedin,
-    link: "linkedin.com/in/abdul-hadi-kamran-a03a5124b"
+    link: "https://www.linkedin.com/in/abdul-hadi-kamran-a03a5124b"
   },
   {
     icon: faSkype,
@@ -76,7 +76,7 @@ function SideBar() {
         <ul className="d-flex justify-content-center text-center flex-wrap px-0">
 
           {socialMediaRow.map(item => {
-            return <li key={Math.random()}><a href={item.link} className={styles.Links} target={"_blank"}><FontAwesomeIcon icon={item.icon} className={styles.iconsSetting} /></a></li>
+            return <li key={Math.random()}><a href={item.link} className={styles.Links} rel="noreferrer" target={"_blank"}><FontAwesomeIcon icon={item.icon} className={styles.iconsSetting} /></a></li>
           })}
         </ul>
       </div>
