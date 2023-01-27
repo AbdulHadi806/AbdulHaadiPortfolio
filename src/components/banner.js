@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import styles from '../styles/helloSection.module.css'
+import styles from '../styles/banner.module.css'
 
-function HelloSection() {
+function Banner() {
   return (
         <div className="row text-start">
-            <div className={`col-md-12 col-lg-5 ${styles.leftSide}`}>
+            <div className={`col-md-12 col-lg-6 ${styles.leftSide}`}>
                 <h1 className={styles.helloIAm}>Hello, I am <span className={styles.myName}>Abdul Hadi</span></h1>
                 <h3 className={`text-capitalize`}>I Am a Passionate Developer</h3>
                 <p className={` ${styles.aboutMe}`}>
@@ -14,10 +14,10 @@ function HelloSection() {
                  web services and online stores.
                 </p>
                   <div className={` ${styles.goPortfolio}`}>
-                  <Link className={styles.linkBut} href={"/PortFolio"} style={{color:"#fff", textDecoration:"none"}}>Go to PortFolio</Link>
+                  <Link className={`text-decoration-none ` + styles.linkBut} href={"#Portfolio"} style={{color:"#fff"}}>Go to PortFolio</Link>
                   </div>
             </div>
-            <div className="col-md-12 col-lg-7">
+            <div className="col-md-12 col-lg-6">
                 <div className={`text-center ${styles.mainImage}`}>
                     <Image src="/images/hello-img.png"
               alt="Abdul Hadi"
@@ -31,4 +31,4 @@ function HelloSection() {
   )
 }
 
-export default HelloSection
+export default Banner

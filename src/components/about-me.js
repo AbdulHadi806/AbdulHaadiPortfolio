@@ -2,6 +2,7 @@ import useSWR from 'swr'
 import Image from 'next/image'
 import styles from '../styles/aboutme.module.css'
 import Link from 'next/link'
+import Commontitle from './commonTitle'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -50,20 +51,7 @@ export default function Aboutme() {
       </div>
       <div className="col-md-12 col-lg-7 text-start">
         <div className={styles.titleRow}>
-          <h2
-            className="fw-normal"
-            style={{ color: '#0b0b13', fontSize: '46px', letterSpacing: '7px' }}
-          >
-            {data.AboutMe.titleMain}{' '}
-            <span style={{ marginLeft: '-7px', display: 'block' }}>
-              <Image
-                src={data.AboutMe.arrowimg}
-                width={80}
-                height={16}
-                alt="arrow"
-              />
-            </span>
-          </h2>
+          <Commontitle title={data.AboutMe.titleMain} icon ={data.skills.arrowimg}/>
           <h3 style={{ fontSize: '24px', fontWeight: '600' }}>
             {data.AboutMe.titleSecondary}
           </h3>

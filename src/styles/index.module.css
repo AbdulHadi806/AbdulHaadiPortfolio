@@ -14,7 +14,7 @@
     padding: 150px 0 100px 0;
 }
 .separation {
-    padding-bottom: 80px;
+    margin: 93px 0 61px 0;
     position: relative;
 }
 .separation:after {
@@ -28,4 +28,7 @@
     height: 1px;
     opacity: 0.1;
     background: #0b0b13;
+}
+#Portfolio {
+
 }

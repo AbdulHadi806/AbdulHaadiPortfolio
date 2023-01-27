@@ -1,6 +1,6 @@
-import React from 'react'
+import React,{useState} from 'react'
 import useSWR from 'swr'
-import styles from '../styles/whatido.module.css'
+import styles from '../styles/services.module.css'
 import Image from 'next/image'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
@@ -23,7 +23,7 @@ function Services() {
         }}
       >
         What I do?{' '}
-        <span style={{ marginLeft: '-7px', display: 'block' }}>
+        <span className='d-flex' style={{ marginLeft: '-7px'}}>
           <Image
             src={data.skills.arrowimg}
             width={80}
@@ -36,15 +36,10 @@ function Services() {
         <div className="row">
           {data.WhatIDo.map((items) => {
             return (
-              <div key={Math.random()} className="col-sm-6">
+              <div key={Math.random()} className="col-sm-4">
                 <div className={styles.skillBox}>
                   <h4
                     className={styles.whatIdoType}
-                    style={{
-                      fontWeight: 600,
-                      color: '#0b0b13',
-                      fontSize: '19px',
-                    }}
                   >
                     {items}
                   </h4>

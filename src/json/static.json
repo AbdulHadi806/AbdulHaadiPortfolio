@@ -1,15 +1,15 @@
 {
     "AboutMe": {
-    "titleMain": "ABOUT ME.",
-    "titleSecondary": "I'm a experienced Freelancer Front-end Developer.",
-    "description": "I'm a experienced Freelancer Front-end Developer. I'm from Pakistan. I code and create web elements for amazing people around the world. I like to work with new people. New people new Experiences.",
-    "contactBtn": "Contact Me",
-    "portfolioBtn": "Portfolio",
-    "arrowimg": "/images/Arrow-aboutUS.png",
-    "img1": "/images/hello-img.png",
-    "img2": "/images/hello-img.png",
-    "img3": "/images/hello-img.png",
-    "img4": "/images/hello-img.png"
+        "titleMain": "ABOUT ME.",
+        "titleSecondary": "I'm a experienced Freelancer Front-end Developer.",
+        "description": "I'm a experienced Freelancer Front-end Developer. I'm from Pakistan. I code and create web elements for amazing people around the world. I like to work with new people. New people new Experiences.",
+        "contactBtn": "Contact Me",
+        "portfolioBtn": "Portfolio",
+        "arrowimg": "/images/Arrow-aboutUS.png",
+        "img1": "/images/hello-img.png",
+        "img2": "/images/hello-img.png",
+        "img3": "/images/hello-img.png",
+        "img4": "/images/hello-img.png"
     },
     "skills": {
         "heading": "My SKILLS",
@@ -20,11 +20,10 @@
                 "skill": "HTML/CSS",
                 "experince": "93%"
             },
-           
             {
-                "skill":"React.js",
+                "skill": "React.js",
                 "experince": "73%"
-            }, 
+            },
             {
                 "skill": "VANILLA JAVASCRIPT",
                 "experince": "87%"
@@ -34,10 +33,67 @@
                 "experince": "65%"
             },
             {
-                "skill" : "Graphic Desiging with Photoshop",
+                "skill": "Graphic Desiging with Photoshop",
                 "experince": "52%"
             }
         ]
     },
-    "WhatIDo": ["PSD/XD/FIGMA to HTML/Bootstrap/Tailwind CSS", "React.js Web Applications", "Next.js Web Applications","SEO by Yoast", "Web Designing", "WireFraming"]
+    "WhatIDo": [
+        "UI/UX",
+        "React.js Web Applications",
+        "Next.js Web Applications",
+        "SEO by Yoast",
+        "Web Designing",
+        "WireFraming"
+    ],
+    "Portfolio": {
+        "title": "My Portfolio.",
+        "intro": "Check out my Past work",
+        "images": [
+            {
+                "src": "/images/portfolio1.png",
+                "width": 500,
+                "height": 400
+            },
+            {
+                "src": "/images/portfolio7.png",
+                "width": 300,
+                "height": 500
+            },
+            {
+                "src": "/images/portfolio3.png",
+                "width": 400,
+                "height": 400
+            },
+            {
+                "src": "/images/portfolio6.png",
+                "width": 300,
+                "height": 500
+            },
+            {
+                "src": "/images/portfolio4.png",
+                "width": 350,
+                "height": 330
+            },
+            {
+                "src": "/images/portfolio5.png",
+                "width": 400,
+                "height": 400
+            },
+            {
+                "src": "/images/portfolio2.png",
+                "width": 300,
+                "height": 500
+            }
+        ]
+    },
+    "ContactMe": {
+        "ContactMeTitle": "GET IN TOUCH.",
+        "ContactRightBox": {
+            "ContactBoxIntro": "What’s your story? Get in touch",
+            "ContactBoxDesc": "Always available for freelancing if the right project comes along, Feel free to contact me.",
+            "Email": "abdul.806@yahoo.com",
+            "location": "Pakistan,Islamabad,Model Town"
+        }
+    }
 }

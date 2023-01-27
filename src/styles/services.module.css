@@ -1,20 +1,24 @@
 .skillBox {
-    background: #f7f7ff;
-    height: 163px;
-    max-width: 518px;
+    background: #2FBF71;
+    height: 103px;
+    max-width: 332px;
     width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
+    border-radius: 7px;
     transition: .3s all ease-in-out;
     margin: 7px 0;
 }
 .skillBox:hover {
-    background: #2fbf71;
+    background-color: rgba(0, 255, 28, 0.4);
 }
 .whatIdoType {
     transition: .3s all ease-in-out;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
 }
 .skillBox:hover .whatIdoType {
-    color: #fff !important;
+    color: #000 !important;
 }
