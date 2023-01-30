@@ -38,14 +38,17 @@
             }
         ]
     },
-    "WhatIDoTitle": "What I Do",
+    "WhatIDoTitle": "Everything I Do",
     "WhatIDo": [
         "UI/UX",
-        "React.js Web Applications",
-        "Next.js Web Applications",
-        "SEO by Yoast",
+        "React.js",
+        "Next.js",
+        "Redux",
         "Web Designing",
-        "WireFraming"
+        "WireFraming",
+        "Bootstrap",
+        "TailWind CSS",
+        "Wordpress"
     ],
     "Portfolio": {
         "title": "My Portfolio.",
