@@ -1,0 +1,14 @@
+.commonTile {
+    padding-bottom: 30px;
+          letter-spacing: 7px;
+          font-size: 46px;
+          font-weight: 400;
+          color: #0b0b13
+}
+@media(max-width:767px){
+    .commonTile {
+        letter-spacing: 4px !important;
+    font-size: 30px !important;
+
+    }
+}

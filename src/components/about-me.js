@@ -13,9 +13,9 @@ export default function Aboutme() {
   if (!data) return <div>Loading...</div>
   return (
     <div className="row">
-      <div className="col-md-6 col-lg-5">
+      <div className="col-md-12 col-lg-5">
         <div className="row">
-          <div className={`col-lg-5 ${styles.imgColLeft}`}>
+          <div className={`col-md-12 col-lg-5 ${styles.imgColLeft}`}>
             <Image
               src={data.AboutMe.img1}
               width={270}
@@ -52,7 +52,7 @@ export default function Aboutme() {
       <div className="col-md-12 col-lg-7 text-start">
         <div className={styles.titleRow}>
           <Commontitle title={data.AboutMe.titleMain} icon ={data.skills.arrowimg}/>
-          <h3 style={{ fontSize: '24px', fontWeight: '600' }}>
+          <h3 className={styles.mainHeadingAboutme}>
             {data.AboutMe.titleSecondary}
           </h3>
           <p className={styles.aboutMeDecription}>{data.AboutMe.description}</p>

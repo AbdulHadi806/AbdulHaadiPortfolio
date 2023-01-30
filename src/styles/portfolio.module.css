@@ -9,15 +9,15 @@
 
   
   .item:hover {
-    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.2); 
     position: relative;
-    z-index: 99;
   }
 .item {
  display: inline-block;
  max-width: 400px;
  transition: transform .2s; 
  margin: 7px auto;
+ z-index: 8;
  width:  100%; 
 }
 .zoom {
@@ -26,4 +26,9 @@
 .well {
  position:relative;
  display: block;
+}
+@media(max-width:767px){
+  .zoom {
+    width: 80%;
+}
 }

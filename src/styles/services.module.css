@@ -22,3 +22,12 @@
 .skillBox:hover .whatIdoType {
     color: #000 !important;
 }
+@media(max-width:767px){
+    .skillBox {
+        height: 59px;
+        max-width: 153px;
+    }
+    .whatIdoType {
+        font-size: 14px;
+    }
+}

@@ -1,20 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
+import styles from "../styles/common.module.css"
 
 function Commontitle({title, icon}) {
   return (
-    <h2
-        className="text-uppercase"
-        style={{
-          textAlign: 'left',
-          paddingBottom: '30px',
-          letterSpacing: '7px',
-          fontSize: '46px',
-          fontWeight: 400,
-          color: '#0b0b13',
-        }}
+    <h2 
+        className={`text-uppercase text-start ${styles.commonTile}`}
       >
-        {title}{' '}
+        {title}
         <span className="d-flex" style={{ marginLeft: '-7px' }}>
           <Image
             src={icon}

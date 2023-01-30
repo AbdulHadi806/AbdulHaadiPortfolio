@@ -11,7 +11,7 @@ function Portfolio() {
   if (!data) return <div>Loading...</div>
   return (
     <div>
-      <Commontitle title={data.Portfolio.title} icon ={data.skills.arrowimg}/>
+      <Commontitle title={data.Portfolio.title} className="text-start" icon ={data.skills.arrowimg}/>
       <div className={`${styles.row} ${styles.portfolioContent}`}>
         {data.Portfolio.images.map((items) => {
           return (

@@ -1,6 +1,7 @@
 .imges {
     border-radius: 30px;
     margin-top: 7px;
+    max-width: 300px;
     width: 100%;
 }
 .imgColLeft {
@@ -44,4 +45,20 @@
 }
 .titleRow {
     max-width: 747px;
+}
+@media(max-width: 992px){
+    .imges {
+        width: 200px;
+        padding-right: 10px !important;
+    }
+    .titleRow {
+        max-width: initial;
+    }
+    .titleRow {
+        padding-top: 15px;
+    }
+    .titleRow h2 {
+        padding-bottom: 8px;
+        padding-top: 50px;
+    }
 }

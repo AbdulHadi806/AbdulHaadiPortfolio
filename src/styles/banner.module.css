@@ -38,6 +38,7 @@
     display: inline-block;
     transition: .2s all ease-in-out;
 }
+
 .goPortfolio:hover .linkBut{
     color: #000 !important;
 }
@@ -48,4 +49,25 @@
 }
 .leftSide {
     padding-top: 50px;
+}
+
+@media(max-width:992px){
+    .myName {
+        font-size: 44px;
+        line-height: 38px;
+    }
+    .goPortfolio {
+        width: 129px;
+    }
+}
+@media(max-width:767px){
+    .reverseDirectionMobile{
+        flex-direction: column-reverse !important;
+    }
+    .myMainImage {
+       width: 50% !important;
+    }
+    .aboutMe {
+        max-width: initial;
+    }
 }
