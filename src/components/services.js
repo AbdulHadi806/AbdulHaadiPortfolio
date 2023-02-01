@@ -17,7 +17,7 @@ function Services() {
         <div className="row">
           {data.WhatIDo.map((items) => {
             return (
-              <div key={Math.random()} className="col-4 col-sm-4">
+              <div key={Math.random()} className="col-6 col-sm-4">
                 <div className={styles.skillBox}>
                   <h4
                     className={styles.whatIdoType}

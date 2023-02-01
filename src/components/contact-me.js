@@ -62,7 +62,7 @@ function Contactme() {
                 icon={data.skills.arrowimg}
             />
             <div className="row">
-                <div className="col-lg-5 text-start">
+                <div className="col-lg-6 col-xl-5 text-start">
                     <div className={`${styles.RightBox}`}>
                         <h4>
                             {data.ContactMe.ContactRightBox.ContactBoxIntro}
@@ -77,7 +77,7 @@ function Contactme() {
                             />
                             {data.ContactMe.ContactRightBox.location}
                         </span>
-                        <span>
+                        <span className='d-flex align-items-center'> 
                             <FontAwesomeIcon
                                 style={{ color: 'green', paddingRight: '7px' }}
                                 icon={faEnvelope}
@@ -97,7 +97,7 @@ function Contactme() {
                         </span>
                     </div>
                 </div>
-                <div className="col-lg-7">
+                <div className="col-lg-6 col-xl-7">
                     <div className={styles.forms}>
                         <label className="fw-bold">Message me directly</label>
                         <form className={styles.forms}>

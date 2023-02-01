@@ -42,16 +42,16 @@ export default function Home() {
                     <span className={styles.navToggle3}></span>
                 </button>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
                 <div
-                    className={`g-0 col-3 position-fixed ${
+                    className={`g-0 col-7 col-sm-5 col-md-3 col-lg-3  col-xl-2 position-fixed ${
                         toggler ? styles.sideBarOuter : styles.responsiveNav
                     }`}
                 >
                     <SideBar />
                 </div>
                 <div
-                    className={`col-md-12 col-xl-9 text-center  offset-xl-3  ${styles.helloSectionOuter}`}
+                    className={`col-sm-12 col-lg-10 text-center  offset-xl-3  ${styles.helloSectionOuter}`}
                 >
                     <div className={styles.container}>
                         <div className={`row ${styles.mainRowHead}`}>
