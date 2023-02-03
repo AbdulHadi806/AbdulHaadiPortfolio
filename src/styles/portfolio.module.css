@@ -6,8 +6,6 @@
  -webkit-column-gap: 1em; 
   column-gap: 1em;  
 }
-
-  
   .item:hover {
     transform: scale(1.2); 
     position: relative;
@@ -17,7 +15,7 @@
  max-width: 400px;
  transition: transform .2s; 
  margin: 7px auto;
- z-index: 8;
+ z-index: 9;
  width:  100%; 
 }
 .zoom {

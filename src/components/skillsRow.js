@@ -1,7 +1,7 @@
 import React from 'react'
 import useSWR from 'swr'
 import styles from '../styles/skillsrow.module.css'
-import Commontitle from './commonTitle'
+import {Commontitle, Experince } from './commonTitle'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -32,16 +32,7 @@ const Skillsrow = () => {
                             >
                                 {item.skill}
                             </h4>
-                            <div className="progress">
-                                <div
-                                    className="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                                    role="progressbar"
-                                    style={{ width: item.experince }}
-                                    aria-valuenow="75"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                ></div>
-                            </div>
+                            <Experince Width = {item.experince} />
                         </div>
                     )
                 })}

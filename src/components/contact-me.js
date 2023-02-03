@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../styles/contactme.module.css'
 import useSWR from 'swr'
-import Commontitle from './commonTitle'
+import {Commontitle} from './commonTitle'
 import Link from 'next/link'
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -160,6 +160,7 @@ export default function Contactme() {
                                             placeholder="Name *"
                                             onChange={handleChange}
                                             value={values.name}
+                                            autoComplete="off"
                                         />
                                     </div>
                                 </div>
@@ -174,6 +175,7 @@ export default function Contactme() {
                                             className="form-control"
                                             placeholder="Email *"
                                             value={values && values.email}
+                                            autoComplete="off"
                                         />
                                     </div>
                                 </div>
@@ -202,6 +204,7 @@ export default function Contactme() {
                                     name="message"
                                     placeholder="Enter Your Message *"
                                     rows="4"
+                                    autoComplete="off"
                                 ></textarea>
                             </div>
 

@@ -6,7 +6,6 @@ import {
   faGithub,
   faLinkedin,
   faSkype,
-  faFacebook,
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faHouse,

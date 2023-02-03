@@ -1,7 +1,7 @@
-import React,{useState} from 'react'
+import React from 'react'
 import useSWR from 'swr'
 import styles from '../styles/services.module.css'
-import Commontitle from './commonTitle'
+import {Commontitle} from './commonTitle'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 

@@ -2,7 +2,7 @@ import React from 'react'
 import useSWR from 'swr'
 import styles from '../styles/portfolio.module.css'
 import Image from 'next/image'
-import Commontitle from './commonTitle'
+import {Commontitle} from './commonTitle'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 function Portfolio() {

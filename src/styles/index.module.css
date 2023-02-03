@@ -48,6 +48,7 @@
 }
 .navigationButton {
     border: transparent;
+    z-index: 999999;
 }
 .mainApp {
     height: 100vh;
@@ -126,7 +127,11 @@
         justify-content: initial;
     }
 }
-
+@media(max-height:767px){
+    .sideBarOuter,.responsiveNav {
+        padding: 10px 0 10px 0;
+    }
+}
 @keyframes animationtoggle {
     from {left: -30px;}
     to {right: 0;}

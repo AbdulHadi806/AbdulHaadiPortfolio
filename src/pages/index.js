@@ -20,12 +20,12 @@ export default function Home() {
     const setToggelerChangeHandler = () => {
         setToggeler((prevCheck) => !prevCheck)
     }
-        useEffect(() => {
-                setTimeout(() => {
-                    setLoading(false)
-                }, 1100)
-                
-        }, [])
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 1100)
+
+    }, [])
     return (
         <div className={loading ? styles.mainApp : ""}>{loading ? <ClipLoader
             color={"#000"}
@@ -54,7 +54,7 @@ export default function Home() {
         </div>
             <div className="row justify-content-center">
                 <div
-                    className={`g-0 col-8 col-sm-5 col-md-4 col-lg-3  col-xl-3 col-xxl-2 position-fixed ${toggler ? styles.sideBarOuter : styles.responsiveNav
+                    className={`g-0 col-8 col-sm-5 col-md-4 col-lg-3  col-xl-2 col-xxl-2 position-fixed ${toggler ? styles.sideBarOuter : styles.responsiveNav
                         }`}
                 >
                     <SideBar />
