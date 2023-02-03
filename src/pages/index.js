@@ -9,44 +9,53 @@ import Skillsrow from '@/components/skillsRow'
 import Services from '@/components/services'
 import Portfolio from '@/components/portfolio'
 import Contactme from '@/components/contact-me'
+import ClipLoader from "react-spinners/ClipLoader";
 
 ('use client')
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
     const [toggler, setToggeler] = useState(false)
+    const [loading, setLoading] = useState(true)
     const setToggelerChangeHandler = () => {
         setToggeler((prevCheck) => !prevCheck)
     }
-
-
+        useEffect(() => {
+                setTimeout(() => {
+                    setLoading(false)
+                }, 1100)
+                
+        }, [])
     return (
-        <>
-            <div
-                className={`${toggler == false ? styles.bgColor : ''}  ${
-                    styles.headerResponsive
+        <div className={loading ? styles.mainApp : ""}>{loading ? <ClipLoader
+            color={"#000"}
+            loading={loading}
+            size={80}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+        /> : <><div
+            className={`${toggler == false ? styles.bgColor : ''}  ${styles.headerResponsive
                 } d-flex position-fixed justify-content-between container-fluid`}
+        >
+            <a
+                href="#"
+                className={`text-decoration-none text-uppercase fw-bold ${styles.responsiveLogo}`}
             >
-                <a
-                    href="#"
-                    className={`text-decoration-none text-uppercase fw-bold ${styles.responsiveLogo}`}
-                >
-                    Abdul Hadi
-                </a>
-                <button
-                    onClick={setToggelerChangeHandler}
-                    className={`display-none position-relative ${styles.navigationButton}`}
-                >
-                    <span></span>
-                    <span className={styles.navToggle2}></span>
-                    <span className={styles.navToggle3}></span>
-                </button>
-            </div>
+                Abdul Hadi
+            </a>
+            <button
+                onClick={setToggelerChangeHandler}
+                className={`display-none position-relative ${styles.navigationButton}`}
+            >
+                <span></span>
+                <span className={styles.navToggle2}></span>
+                <span className={styles.navToggle3}></span>
+            </button>
+        </div>
             <div className="row justify-content-center">
                 <div
-                    className={`g-0 col-7 col-sm-5 col-md-3 col-lg-3  col-xl-2 position-fixed ${
-                        toggler ? styles.sideBarOuter : styles.responsiveNav
-                    }`}
+                    className={`g-0 col-8 col-sm-5 col-md-4 col-lg-3  col-xl-3 col-xxl-2 position-fixed ${toggler ? styles.sideBarOuter : styles.responsiveNav
+                        }`}
                 >
                     <SideBar />
                 </div>
@@ -91,7 +100,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </>
+            </div> </>}
+
+        </div>
     )
 }

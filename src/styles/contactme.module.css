@@ -12,24 +12,19 @@
     color: #000;
 }
 
-.forms {
-    background-color: #f7f7ff;
-    padding: 29px 36px;
-}
-
 .linkBut {
-    background-color: #2fbf71;
-    width: 206px;
+    color: #fff;
+    text-decoration: none;
+    max-width: 206px;
     height: 37px;
     cursor: pointer;
+    width: 100%;
     text-align: center;
     transition: .3s all ease-in;
-    border: 1px solid transparent;
 }
 
 .linkBut:hover {
     background-color: transparent;
-    color: #000 !important;
     border: 1px solid #000;
     box-shadow: initial;
 }
@@ -43,6 +38,14 @@
     font-size: 16px;
     resize: none;
 }
-.closeAlert {
-    display: none;
+.forms {
+    height: 442px;
+    flex-direction: column;
+    background-color: #f7f7ff;
+    padding: 29px 36px 15px 36px;
+}
+@media(max-width: 767px) {
+    .Email {
+        font-size: 17px;
+    }
 }

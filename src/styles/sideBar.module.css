@@ -49,7 +49,7 @@
 }
 .Links::after {
     content: "";
-    width: 250px;
+    width: 100%;
     background-color: #efeff8;
     bottom: -1px;
     left: 0;
@@ -68,3 +68,15 @@
 .socialMediaRow ul {
     gap: 20px;
 }
+@media screen and (max-height: 800px) {
+    .container {
+        justify-content: initial !important;
+    }
+    .socialMediaRow {
+        padding-top: 15px !important;
+    }
+    .sideBar_top {
+        padding: 0 0 20px 0;
+    }
+}
+    

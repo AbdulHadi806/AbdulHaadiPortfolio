@@ -64,15 +64,11 @@ function SideBar() {
     {
       icon: faSkype,
       link: 'https://join.skype.com/invite/w4gMPkxmGojb',
-    },
-    {
-      icon: faFacebook,
-      link: 'none',
-    },
+    }
   ]
   return (
     <div
-      className={`justify-content-between d-flex flex-column ${styles.container}`}
+      className={`justify-content-between sidenav-menu d-flex flex-column ${styles.container}`}
     >
       <div className={`position-absolute ${styles.bg_img}`}></div>
       <div className={styles.sideBar_inner}>

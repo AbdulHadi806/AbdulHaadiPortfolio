@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/contactme.module.css'
 import useSWR from 'swr'
 import Commontitle from './commonTitle'
@@ -6,20 +6,26 @@ import Link from 'next/link'
 import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { sendContactForm } from 'lib/api'
+import { Alertbox1, Alertbox2 } from './alertbox'
 
 const initValues = { name: '', email: '', subject: '', message: '' }
 const initState = { values: initValues }
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-function Contactme() {
+export default function Contactme() {
     const [state, setState] = useState(initState)
-    const [success, setSuccess] = useState( false)
-    const [failed, setFailed] = useState(false)
-    const [isLoading, setLoading] = useState(false)
-    const [toggle, setToggle] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const [isloading, setIsLoading] = useState(false)
+    const [message, setMessage] = useState('')
+    const [error, setError] = useState(false)
+    const [toggle, setToggle] = useState(true)
+
     const { values } = state
-    const toggleHandler = (e)=> {
-        setToggle((prevCheck) => !prevCheck)
+
+    const closeHandler = () => {
+        setToggle(true)
+        setSuccess(false)
+        setError(false)
     }
     const handleChange = ({ target }) =>
         setState((prev) => ({
@@ -31,27 +37,45 @@ function Contactme() {
         }))
 
     const onSubmit = async () => {
-        setState((prev) => ({
-            ...prev,
-            isLoading: true,
-        }))
+        if (
+            values.name.length == 0 ||
+            values.email.length == 0 ||
+            values.subject.length == 0 ||
+            values.message.length == 0
+        ) {
+            setMessage('Something is missing or invalid format')
+            setError(true)
+            setToggle(false)
+            return
+        }
+        const characters = values.email.slice(-4)
+        if (characters !== '.com') {
+            setMessage('Incorrect Email Format...')
+            setError(true)
+            setToggle(false)
+            return
+        }
+        setIsLoading(true)
         try {
-            setLoading(true)
-            if(values.name.length == 0 || values.email.length == 0 || values.subject.length == 0 || values.message.length == 0){
-                return setFailed("Something is missing or invalid format")
-            }
-            const characters = values.email.slice(-4);
-             if(characters !== ".com"){
-              return setFailed("Incorrect Email Format. Common...")
-            }
+            setIsLoading(true)
+            setSuccess(true)
+            setMessage(
+                'We will reply to you through your email within 24 hours.'
+            )
             await sendContactForm(values)
             setState(initState)
+            setToggle(false)
             setSuccess(true)
         } catch (error) {
+            setMessage('Opps... Something went wrong please try again.')
+            setError(true)
+            setToggle(false)
             setSuccess(false)
         }
-        setLoading(false)
+
+        setIsLoading(false)
     }
+
     const { data, Error } = useSWR('/api/portfolio', fetcher)
     if (Error) return <div>Failed to load</div>
     if (!data) return <div>Loading...</div>
@@ -77,7 +101,7 @@ function Contactme() {
                             />
                             {data.ContactMe.ContactRightBox.location}
                         </span>
-                        <span className='d-flex align-items-center'> 
+                        <span className="d-flex align-items-center">
                             <FontAwesomeIcon
                                 style={{ color: 'green', paddingRight: '7px' }}
                                 icon={faEnvelope}
@@ -98,34 +122,34 @@ function Contactme() {
                     </div>
                 </div>
                 <div className="col-lg-6 col-xl-7">
-                    <div className={styles.forms}>
+                    <div className={`d-flex justify-content-center ${styles.forms}`}>
                         <label className="fw-bold">Message me directly</label>
-                        <form className={styles.forms}>
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault()
+                                onSubmit()
+                            }}
+                            className={styles.forms}
+                        >
                             <div className="row">
                                 {success ? (
-                                    <div
-                                        class={ toggle? styles.closeAlert : "alert alert-success alert-dismissible fade show"}
-                                        data-bs-dismiss="alert"
-                                        role="alert"
-                                    >
-                                        <strong>Success!</strong>{' '}
-                                        Thank you for sending your
-                                        Information. We will reply you within 24
-                                        hours.
-                                        <button onClick={toggleHandler} type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                    
-                                ) : ""}
-                                {failed ? (
-                                    <div
-                                        class={toggle? styles.closeAlert : "alert alert-danger alert-dismissible fade show"}
-                                        data-bs-dismiss="alert"
-                                        role="alert"
-                                    >
-                                        <strong>Error!</strong>{' '}
-                                        {failed}
-                                    </div>
-                                ) : ""}
+                                    <Alertbox1
+                                        message={message}
+                                        toggle={toggle}
+                                        toggleHandler={closeHandler}
+                                    />
+                                ) : (
+                                    ''
+                                )}
+                                {error ? (
+                                    <Alertbox2
+                                        message={message}
+                                        toggle={toggle}
+                                        toggleHandler={closeHandler}
+                                    />
+                                ) : (
+                                    ''
+                                )}
                                 <div className="col-lg-6">
                                     <div className="form-outline mb-4">
                                         <input
@@ -149,7 +173,7 @@ function Contactme() {
                                             onChange={handleChange}
                                             className="form-control"
                                             placeholder="Email *"
-                                            value={values.email}
+                                            value={values && values.email}
                                         />
                                     </div>
                                 </div>
@@ -163,7 +187,7 @@ function Contactme() {
                                         onChange={handleChange}
                                         className="form-control"
                                         placeholder="subject *"
-                                        value={values.subject}
+                                        value={values && values.subject}
                                     />
                                 </div>
                             </div>
@@ -174,7 +198,7 @@ function Contactme() {
                                     }
                                     id="form4Example3"
                                     onChange={handleChange}
-                                    value={values.message}
+                                    value={values && values.message}
                                     name="message"
                                     placeholder="Enter Your Message *"
                                     rows="4"
@@ -183,20 +207,18 @@ function Contactme() {
 
                             <button
                                 type="submit"
-                                onClick={(e) => {
-                                    e.preventDefault()
-                                    onSubmit()
-                                }}
+                                style={
+                                    isloading == false
+                                        ? { backgroundColor: '#2fbf71' }
+                                        : {
+                                              backgroundColor:
+                                                  'rgb(47, 162, 91)',
+                                          }
+                                }
                                 className={styles.linkBut}
                                 href={'#Portfolio'}
-                                isLoading={isLoading}
-                                disabled={
-                                    isLoading == true
-                                }
-                                style={{
-                                    color: '#fff',
-                                    textDecoration: 'none',
-                                }}
+                                isloading={isloading}
+                                disabled={isloading}
                             >
                                 Send
                             </button>
@@ -207,4 +229,3 @@ function Contactme() {
         </div>
     )
 }
-export default Contactme

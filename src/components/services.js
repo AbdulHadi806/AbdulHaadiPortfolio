@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import useSWR from 'swr'
 import styles from '../styles/services.module.css'
-import Image from 'next/image'
 import Commontitle from './commonTitle'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())

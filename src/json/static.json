@@ -11,6 +11,14 @@
         "img3": "/images/hello-img.png",
         "img4": "/images/hello-img.png"
     },
+    "Banner": {
+        "titleMain": "Hello, I am",
+        "titleSecondary": "Abdul Hadi",
+        "TitleIAm": "I Am a Passionate Developer",
+        "MyDescription": "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites,web services and online stores.",
+        "ButtonPortFolio": "Go to PortFolio",
+        "MyImage": "/images/hello-img.png"
+    },
     "skills": {
         "heading": "My SKILLS",
         "arrowimg": "/images/Arrow-aboutUS.png",
@@ -18,11 +26,11 @@
         "expertise": [
             {
                 "skill": "HTML/CSS",
-                "experince": "93%"
+                "experince": "97%"
             },
             {
                 "skill": "React.js",
-                "experince": "73%"
+                "experince": "86%"
             },
             {
                 "skill": "VANILLA JAVASCRIPT",
@@ -30,11 +38,11 @@
             },
             {
                 "skill": "Next.js",
-                "experince": "65%"
+                "experince": "74%"
             },
             {
                 "skill": "Graphic Desiging with Photoshop",
-                "experince": "52%"
+                "experince": "67%"
             }
         ]
     },
