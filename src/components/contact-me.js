@@ -67,7 +67,7 @@ export default function Contactme() {
             setToggle(false)
             setSuccess(true)
         } catch (error) {
-            setMessage('Opps... Something went wrong please try again.')
+            setMessage('Something went wrong please try again.')
             setError(true)
             setToggle(false)
             setSuccess(false)
