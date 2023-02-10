@@ -68,7 +68,7 @@
 .socialMediaRow ul {
     gap: 20px;
 }
-@media screen and (max-height: 750px) {
+@media screen and (max-height: 735px) {
     .container {
         justify-content: initial !important;
     }
