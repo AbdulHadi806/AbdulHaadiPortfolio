@@ -48,13 +48,6 @@ export default function Contactme() {
             setToggle(false)
             return
         }
-        const characters = values.email.slice(-4)
-        if (characters !== '.com') {
-            setMessage('Incorrect Email Format...')
-            setError(true)
-            setToggle(false)
-            return
-        }
         setIsLoading(true)
         try {
             setIsLoading(true)
