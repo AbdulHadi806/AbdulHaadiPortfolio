@@ -127,7 +127,7 @@
         justify-content: initial;
     }
 }
-@media(max-height:745px){
+@media(max-height:700px){
     .sideBarOuter,.responsiveNav {
         padding: 10px 0 10px 0;
     }
