@@ -44,7 +44,6 @@
 }
 .closeButton:hover .overLay{
   height: 100%;
-  color: #fff;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .animatedOverlayTxt {
@@ -54,6 +53,14 @@
     height: 47px;
     display: inline-block;
     line-height: 41px;
+    color: #fff;
+    border: 1px solid transparent;
+    transition: .2s all ease-in-out;;
+}
+.animatedOverlayTxt:hover {
+  background-color: transparent;
+  border: 1px solid #2FBF71;
+  background: #000;
 }
 @media (max-width: 1500px) {    
   .zoom {
