@@ -28,14 +28,17 @@ function Portfolio() {
           return (
             <div  key={Math.random()} className={styles.item}>
             <div className={styles.well}> 
-            <button style={{border:"transparent"}} onClick={(e)=> {e.preventDefault() ;openHander(items)}}>
-            <Image className={` img-thumbnail ${styles.zoom}`} data-mdb-img={items.src} src={items.src} width={items.width} height={items.height} alt="PortFolio Images" />
+            <button style={{border:"transparent", width:"100%"}} onClick={(e)=> {e.preventDefault() ;openHander(items)}}>
+            <Image className={` img-thumbnail ${styles.zoom}`} src={items.src} width={items.width} height={items.height} alt="PortFolio Images" />
             </button>
             </div>
           </div>
           )
         })}
-      </div>:<><button style={{border:"transparent"}} onClick={closeHander}><img style={{width: "100%"}} src={fullImage && fullImage.src} alt="portfolio-fullscreen" /></button></>}
+      </div>:<><button className={styles.closeButton} style={{border:"transparent"}} onClick={closeHander}>
+        <img className={styles.fullscreenImg} style={{width: "100%"}} src={fullImage && fullImage.src} alt="portfolio-fullscreen" />
+        <div  className={`position-absolute mx-auto my-0 ${styles.overLay}`}><span className={styles.animatedOverlayTxt}>Click to Close</span></div>
+        </button></>}
     </div>
   )
 }
