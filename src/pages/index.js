@@ -20,14 +20,15 @@ export default function Home() {
     const setToggelerChangeHandler = () => {
         setToggeler((prevCheck) => !prevCheck)
     }
+    
+    if (!data) return <div className={styles.mainApp}><ClipLoader
+    color={"#000"}
+    size={80}
+    aria-label="Loading Spinner"
+    data-testid="loader"
+/> </div>
     return (
-        <div className={data ? styles.mainApp : ""}>{data == false ? <ClipLoader
-            color={"#000"}
-            loading={loading}
-            size={80}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-        /> : <><div
+        <div ><div
             className={`${toggler == false ? styles.bgColor : ''}  ${styles.headerResponsive
                 } d-flex position-fixed justify-content-between container-fluid`}
         >
@@ -94,7 +95,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div> </>}
+            </div> 
 
         </div>
     )
