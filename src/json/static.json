@@ -1,8 +1,8 @@
 {
     "AboutMe": {
         "titleMain": "ABOUT ME.",
-        "titleSecondary": "I'm a experienced Freelancer Front-end Developer.",
-        "description": "I'm a experienced Freelancer Front-end Developer. I'm from Pakistan. I code and create web elements for amazing people around the world. I like to work with new people. New people new Experiences.",
+        "titleSecondary": "I'm a experienced Front-end Developer.",
+        "description": "I'm a experienced Front-end Developer. I'm from Pakistan. I Freelance on Upwork and Fiverr. I code and create web elements for amazing people around the world. I like to work with new people. New people new Experiences.",
         "contactBtn": "Contact Me",
         "portfolioBtn": "Portfolio",
         "arrowimg": "/images/Arrow-aboutUS.png",
@@ -14,19 +14,16 @@
     "Banner": {
         "titleMain": "Hello, I am",
         "titleSecondary": "Abdul Hadi",
-        "TitleIAm": "I Am a Passionate",
-        "UpdateTitleLoop": [
-            " Developer",
-            " Freelancer"
-        ],
-        "MyDescription": "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites,web services and online stores.",
+        "TitleIAm": "I am a Passionate",
+        "UpdateTitleLoop": [" Developer", " Freelancer"],
+        "MyDescription": "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores.",
         "ButtonPortFolio": "Go to PortFolio",
         "MyImage": "/images/hello-img.png"
     },
     "skills": {
         "heading": "My SKILLS",
         "arrowimg": "/images/Arrow-aboutUS.png",
-        "description": "I am a experince front web developer. I also have photoshop design experince as well. I create for amazing people. I work on differnet type of web technologies.",
+        "description": "I am a Experince Front-end Developer. I create Pixel Perfect, 100% Responsive sites for different type of clients by using number of different Technologies.",
         "expertise": [
             {
                 "skill": "HTML/CSS",
@@ -106,7 +103,7 @@
     "ContactMe": {
         "ContactMeTitle": "GET IN TOUCH.",
         "ContactRightBox": {
-            "ContactBoxIntro": "What’s your story? Get in touch",
+            "ContactBoxIntro": "What’s your story? \n Get in touch",
             "ContactBoxDesc": "Always available for freelancing if the right project comes along, Feel free to contact me.",
             "Email": "abdul.806@yahoo.com",
             "location": "Pakistan,Islamabad,Model Town"

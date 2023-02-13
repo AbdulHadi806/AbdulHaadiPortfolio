@@ -20,7 +20,7 @@ export default function Home() {
     const setToggelerChangeHandler = () => {
         setToggeler((prevCheck) => !prevCheck)
     }
-    
+    if (error) return <div>Failed to load</div>
     if (!data) return <div className={styles.mainApp}><ClipLoader
     color={"#000"}
     size={80}

@@ -81,13 +81,13 @@ export default function Contactme() {
             <div className="row">
                 <div className="col-lg-6 col-xl-5 text-start">
                     <div className={`${styles.RightBox}`}>
-                        <h4>
+                        <h4 style={{whiteSpace: 'pre-line'}}>
                             {data.ContactMe.ContactRightBox.ContactBoxIntro}
                         </h4>
                         <p style={{ color: '#555555' }}>
                             {data.ContactMe.ContactRightBox.ContactBoxDesc}
                         </p>
-                        <span className="d-flex  h5">
+                        <span className="d-flex h5">
                             <FontAwesomeIcon
                                 style={{ color: 'green', paddingRight: '7px' }}
                                 icon={faLocationDot}

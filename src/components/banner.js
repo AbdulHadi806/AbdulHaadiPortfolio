@@ -14,7 +14,7 @@ function Banner() {
     useEffect(() => {
         const intervalId = setInterval(
             () => setIndex((index) => index + 1),
-            2100 
+            1800
         )
         return () => clearTimeout(intervalId)
     }, [])
@@ -29,7 +29,7 @@ function Banner() {
                         {data.Banner.titleSecondary}
                     </span>
                 </h1>
-                <h3 className={`text-capitalize d-flex`} style={{gap:"12px", flexWrap:"wrap"}}>
+                <h3 className={`d-flex`} style={{gap:"12px", flexWrap:"wrap"}}>
                     {data.Banner.TitleIAm}{' '}
                     <span className={styles.changeTextLoop}>
                         <TextTransition springConfig={presets.wobbly}>

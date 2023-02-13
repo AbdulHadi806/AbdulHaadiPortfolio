@@ -104,7 +104,7 @@ function SideBar() {
                     <FontAwesomeIcon
                       icon={item.icon}
                       className={styles.iconsSetting}
-                      style={{opacity: 0.8}}
+                      style={{opacity: 0.8,paddingRight: "3px"}}
                     />{' '}
                     {item.text}
                   </Link>
