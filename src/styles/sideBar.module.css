@@ -37,6 +37,7 @@
 .navigationList {
     transition: .1s all ease-in-out;
     line-height: 67px;
+    font-size: 16px;
     padding-left: 20px;
     border: 1px solid transparent;
 }
@@ -57,7 +58,7 @@
     height: 1px;
 }
 .iconsSetting {
-    font-size: 20px;
+    font-size: 16px;
 }
 .iconsSetting:hover {
     color: #000;

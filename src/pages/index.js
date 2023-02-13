@@ -24,7 +24,6 @@ export default function Home() {
         setTimeout(() => {
             setLoading(false)
         }, 2000)
-
     }, [])
     return (
         <div className={loading ? styles.mainApp : ""}>{loading ? <ClipLoader

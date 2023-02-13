@@ -50,7 +50,9 @@
 .leftSide {
     padding-top: 50px;
 }
-
+.myMainImage {
+    border: 2px solid green;
+}
 @media(max-width:992px){
     .myName {
         font-size: 44px;

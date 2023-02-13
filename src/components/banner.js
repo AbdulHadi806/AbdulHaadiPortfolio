@@ -12,7 +12,7 @@ function Banner() {
   return (
         <div className={`row text-start ${styles.reverseDirectionMobile}`}>
             <div className={`col-md-6  ${styles.leftSide}`}>
-                <h1 className={styles.helloIAm}>{data.Banner.titleMain} <span className={styles.myName}>{data.Banner.titleSecondarytitleSecondary}</span></h1>
+                <h1 className={styles.helloIAm}>{data.Banner.titleMain} <span className={styles.myName}>{data.Banner.titleSecondary}</span></h1>
                 <h3 className={`text-capitalize`}>{data.Banner.TitleIAm}</h3>
                 <p className={` ${styles.aboutMe}`}>
                 {data.Banner.MyDescription}
