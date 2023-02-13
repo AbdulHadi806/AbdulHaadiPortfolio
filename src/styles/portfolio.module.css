@@ -59,7 +59,6 @@
 }
 .animatedOverlayTxt:hover {
   background-color: transparent;
-  border: 1px solid #2FBF71;
   background: #000;
 }
 @media (max-width: 1500px) {    
