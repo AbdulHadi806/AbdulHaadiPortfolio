@@ -4,7 +4,7 @@ import useSWR from 'swr'
 import React, { useEffect, useState } from 'react'
 import styles from '../styles/banner.module.css'
 import TextTransition, { presets } from 'react-text-transition'
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import BeatLoader from "react-spinners/BeatLoader";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 const TEXTS = ['Forest', 'Building', 'Tree', 'Color']
@@ -21,9 +21,9 @@ function Banner() {
         return () => clearTimeout(intervalId)
     }, [])
     if (error) return <div>Failed to load</div>
-    if (!data) return <ClimbingBoxLoader
+    if (!data) return <BeatLoader
         color={"#000"}
-        size={80}
+        size={20}
         aria-label="Loading Spinner"
         data-testid="loader"
     />
