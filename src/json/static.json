@@ -63,12 +63,12 @@
         "intro": "Check out my Past work",
         "images": [
             {
-                "src": "/images/portfolio1.png",
+                "src": "/images/PortfolioBook.png",
                 "width": 500,
                 "height": 400
             },
             {
-                "src": "/images/portfolio7.png",
+                "src": "/images/Portfoliofarm.png",
                 "width": 300,
                 "height": 500
             },
@@ -78,7 +78,7 @@
                 "height": 400
             },
             {
-                "src": "/images/portfolio6.png",
+                "src": "/images/Portfoliobalance.png",
                 "width": 300,
                 "height": 500
             },
