@@ -9,7 +9,7 @@ import Skillsrow from '@/components/skillsRow'
 import Services from '@/components/services'
 import Portfolio from '@/components/portfolio'
 import Contactme from '@/components/contact-me'
-import ClipLoader from "react-spinners/ClipLoader";
+import BeatLoader from "react-spinners/BeatLoader";
 
 ('use client')
 const inter = Inter({ subsets: ['latin'] })
@@ -26,7 +26,7 @@ export default function Home() {
         }, 2000)
     }, [])
     return (
-        <div className={loading ? styles.mainApp : ""}>{loading ? <ClipLoader
+        <div className={loading ? styles.mainApp : ""}>{loading ? <BeatLoader
             color={"#000"}
             loading={loading}
             size={80}
