@@ -4,6 +4,8 @@ import useSWR from 'swr'
 import React, { useEffect, useState } from 'react'
 import styles from '../styles/banner.module.css'
 import TextTransition, { presets } from 'react-text-transition'
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+
 const fetcher = (url) => fetch(url).then((res) => res.json())
 const TEXTS = ['Forest', 'Building', 'Tree', 'Color']
 function Banner() {
@@ -19,7 +21,12 @@ function Banner() {
         return () => clearTimeout(intervalId)
     }, [])
     if (error) return <div>Failed to load</div>
-    if (!data) return <div>Loading...</div>
+    if (!data) return <ClimbingBoxLoader
+        color={"#000"}
+        size={80}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+    />
     return (
         <div className={`row text-start ${styles.reverseDirectionMobile}`}>
             <div className={`col-md-6  ${styles.leftSide}`}>

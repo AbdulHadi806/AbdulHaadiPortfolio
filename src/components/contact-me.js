@@ -87,21 +87,21 @@ export default function Contactme() {
                         <p style={{ color: '#555555' }}>
                             {data.ContactMe.ContactRightBox.ContactBoxDesc}
                         </p>
-                        <span className="d-flex fw-bold h5">
+                        <span className="d-flex  h5">
                             <FontAwesomeIcon
                                 style={{ color: 'green', paddingRight: '7px' }}
                                 icon={faLocationDot}
                             />
                             {data.ContactMe.ContactRightBox.location}
                         </span>
-                        <span className="d-flex align-items-center">
+                        <span className="d-flex h5  align-items-center">
                             <FontAwesomeIcon
                                 style={{ color: 'green', paddingRight: '7px' }}
                                 icon={faEnvelope}
                             />
                             <Link
                                 className={
-                                    'text-decoration-none fw-bold ' +
+                                    'text-decoration-none  ' +
                                     styles.Email
                                 }
                                 href={

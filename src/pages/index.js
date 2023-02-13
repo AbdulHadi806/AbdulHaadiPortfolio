@@ -59,7 +59,7 @@ export default function Home() {
                     <SideBar />
                 </div>
                 <div
-                    className={`col-sm-12 col-xl-10 text-center  offset-xl-3  ${styles.helloSectionOuter}`}
+                    className={`col-sm-12 col-xl-10 text-center container offset-xl-3  ${styles.helloSectionOuter}`}
                 >
                     <div className={styles.container}>
                         <div className={`row ${styles.mainRowHead}`}>

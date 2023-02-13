@@ -25,6 +25,18 @@
  position:relative;
  display: block;
 }
+
+@media (max-width: 1500px) {    
+  .zoom {
+    width: 100%;
+    background-color: initial !important;
+    border: transparent !important;
+    border-radius: initial !important;
+}
+.row {
+  column-width: 13em;
+}
+}
 @media(max-width:767px){
   .zoom {
     width: 100%;}

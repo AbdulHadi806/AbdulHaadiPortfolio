@@ -73,33 +73,33 @@
             },
             {
                 "src": "/images/Portfoliofarm.png",
-                "width": 300,
-                "height": 500
+                "width": 500,
+                "height": 400
             },
             {
                 "src": "/images/PortfolioForum.png",
-                "width": 400,
+                "width": 500,
                 "height": 400
             },
             {
                 "src": "/images/Portfoliobalance.png",
-                "width": 300,
-                "height": 500
+                "width": 500,
+                "height": 400
             },
             {
                 "src": "/images/portfolio4.png",
-                "width": 350,
-                "height": 330
+                "width": 500,
+                "height": 400
             },
             {
                 "src": "/images/portfolio5.png",
-                "width": 400,
+                "width": 500,
                 "height": 400
             },
             {
                 "src": "/images/portfolio2.png",
-                "width": 300,
-                "height": 500
+                "width": 500,
+                "height": 400
             }
         ]
     },
