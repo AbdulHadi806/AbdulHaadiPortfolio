@@ -10,23 +10,18 @@ import Services from '@/components/services'
 import Portfolio from '@/components/portfolio'
 import Contactme from '@/components/contact-me'
 import ClipLoader from "react-spinners/ClipLoader";
-
+import useSWR from 'swr'
 ('use client')
 const inter = Inter({ subsets: ['latin'] })
-
+const fetcher = (url) => fetch(url).then((res) => res.json())
 export default function Home() {
     const [toggler, setToggeler] = useState(false)
-    const [loading, setLoading] = useState(true)
+    const { data, error } = useSWR('/api/portfolio', fetcher)
     const setToggelerChangeHandler = () => {
         setToggeler((prevCheck) => !prevCheck)
     }
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(false)
-        }, 2000)
-    }, [])
     return (
-        <div className={loading ? styles.mainApp : ""}>{loading ? <ClipLoader
+        <div className={data ? styles.mainApp : ""}>{data == false ? <ClipLoader
             color={"#000"}
             loading={loading}
             size={80}

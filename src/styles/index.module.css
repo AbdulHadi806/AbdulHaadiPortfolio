@@ -50,13 +50,6 @@
     border: transparent;
     z-index: 999999;
 }
-.mainApp {
-    height: 100vh;
-    background-color: #2fbf71;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 @media ( max-width:1200px ) {
     .responsiveNav {
         display: none;
