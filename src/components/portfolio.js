@@ -13,7 +13,7 @@ function Portfolio() {
     <div>
       <Commontitle title={data.Portfolio.title} className="text-start" icon ={data.skills.arrowimg}/>
       <div className={`${styles.row} ${styles.portfolioContent}`}>
-        {data && data.Portfolio.images.map((items) => {
+        {data.Portfolio.images.map((items) => {
           return (
             <div key={Math.random()} className={styles.item}>
             <div className={styles.well}> 
