@@ -3,26 +3,39 @@ import useSWR from 'swr'
 import styles from '../styles/portfolio.module.css'
 import Image from 'next/image'
 import {Commontitle} from './commonTitle'
-
+import { useState } from 'react'
+('use client')
 const fetcher = (url) => fetch(url).then((res) => res.json())
 function Portfolio() {
+  const [isOpen, setOpen] = useState(true)
+  const [fullImage, setFullImage] = useState()
+  const openHander = (items) => {
+    setFullImage(items)
+    setOpen(false)
+  }
+  const closeHander = ( ) => {
+    setFullImage()
+    setOpen(true)
+  }
   const { data, error } = useSWR('/api/portfolio', fetcher)
   if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
   return (
     <div>
       <Commontitle title={data.Portfolio.title} className="text-start" icon ={data.skills.arrowimg}/>
-      <div className={`${styles.row} ${styles.portfolioContent}`}>
-        {data.Portfolio.images.map((items) => {
+      {isOpen? <div className={`${styles.row} ${styles.portfolioContent}`}>
+        { data.Portfolio.images.map((items) => {
           return (
-            <div key={Math.random()} className={styles.item}>
+            <div  key={Math.random()} className={styles.item}>
             <div className={styles.well}> 
-            <Image className={` img-thumbnail ${styles.zoom}`} src={items.src} width={items.width} height={items.height} alt="PortFolio Images" />
+            <button style={{border:"transparent"}} onClick={(e)=> {e.preventDefault() ;openHander(items)}}>
+            <Image className={` img-thumbnail ${styles.zoom}`} data-mdb-img={items.src} src={items.src} width={items.width} height={items.height} alt="PortFolio Images" />
+            </button>
             </div>
           </div>
           )
         })}
-      </div>
+      </div>:<><button style={{border:"transparent"}} onClick={closeHander}><img style={{width: "100%"}} src={fullImage && fullImage.src} alt="portfolio-fullscreen" /></button></>}
     </div>
   )
 }

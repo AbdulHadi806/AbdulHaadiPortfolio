@@ -7,6 +7,7 @@ import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { sendContactForm } from 'lib/api'
 import { Alertbox1, Alertbox2 } from './alertbox'
+('use client')
 
 const initValues = { name: '', email: '', subject: '', message: '' }
 const initState = { values: initValues }

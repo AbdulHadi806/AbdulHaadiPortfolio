@@ -14,7 +14,7 @@ function Banner() {
     useEffect(() => {
         const intervalId = setInterval(
             () => setIndex((index) => index + 1),
-            1800
+            2000
         )
         return () => clearTimeout(intervalId)
     }, [])
