@@ -14,7 +14,11 @@
     "Banner": {
         "titleMain": "Hello, I am",
         "titleSecondary": "Abdul Hadi",
-        "TitleIAm": "I Am a Passionate Developer",
+        "TitleIAm": "I Am a Passionate",
+        "UpdateTitleLoop": [
+            " Developer",
+            " Freelancer"
+        ],
         "MyDescription": "I design and develop services for customers of all sizes, specializing in creating stylish, modern websites,web services and online stores.",
         "ButtonPortFolio": "Go to PortFolio",
         "MyImage": "/images/hello-img.png"

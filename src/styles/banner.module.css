@@ -47,6 +47,9 @@
     border: 1px solid #000;
     box-shadow: initial;
 }
+.changeTextLoop {
+    color: rgb(254, 192, 0);
+}
 .leftSide {
     padding-top: 50px;
 }

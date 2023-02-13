@@ -18,11 +18,11 @@
 }
 .btns {
     background-color: #2fbf71;
-    width: 109px;
-    height: 37px;
+    width: 132px;
+    height: 41px;
     cursor: pointer;
     box-shadow: 5px 5px #000;
-    line-height: 2;
+    line-height: 39px;
     transition: .3s all ease-in;
     border: 1px solid transparent;
     color: #fff;

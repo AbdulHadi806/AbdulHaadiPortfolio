@@ -116,7 +116,7 @@ export default function Contactme() {
                 </div>
                 <div className="col-lg-6 col-xl-7">
                     <div className={`d-flex justify-content-center ${styles.forms}`}>
-                        <label className="fw-bold">Message me directly</label>
+                        <label className="fw-bold" style={{fontSize: "20px"}}>Get In Touch With Me Directly</label>
                         <form
                             onSubmit={(e) => {
                                 e.preventDefault()

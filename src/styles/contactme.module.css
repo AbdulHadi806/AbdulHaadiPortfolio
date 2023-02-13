@@ -39,7 +39,7 @@
     resize: none;
 }
 .forms {
-    height: 442px;
+    height: auto;
     flex-direction: column;
     background-color: #f7f7ff;
     padding: 29px 36px 15px 36px;

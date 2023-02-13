@@ -27,6 +27,11 @@
 }
 @media(max-width:767px){
   .zoom {
-    width: 80%;
+    width: 100%;}
+.item {
+  max-width: 314px;
+}
+.row {
+  column-width: 9em;
 }
 }

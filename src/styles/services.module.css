@@ -24,10 +24,10 @@
 }
 @media(max-width:767px){
     .skillBox {
-        height: 59px;
-        max-width: 153px;
+        height: 71px;
+        max-width: 206px;
     }
     .whatIdoType {
-        font-size: 14px;
+        font-size: 17px;
     }
 }

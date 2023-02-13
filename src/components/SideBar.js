@@ -125,6 +125,7 @@ function SideBar() {
                   target={'_blank'}
                 >
                   <FontAwesomeIcon
+                  style={{fontSize: "20px"}}
                     icon={item.icon}
                     className={styles.iconsSetting}
                   />
