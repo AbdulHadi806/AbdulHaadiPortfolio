@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '../styles/sideBar.module.css'
 import Image from 'next/image'
-import Link from 'next/link'
 import {
   faGithub,
   faLinkedin,
@@ -16,38 +15,39 @@ import {
   faMessage,
   faAtom
 } from '@fortawesome/free-solid-svg-icons'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function SideBar({modeToggler}) {
+function SideBar({ modeToggler }) {
   const navigation = [
     {
-      text:'Home',
+      text: 'Home',
       link: 'Home',
       icon: faHouse,
     },
     {
-      text:'About',
+      text: 'About',
       link: 'About',
       icon: faAddressCard,
     },
     {
-      text:"Skills",
+      text: "Skills",
       link: "Skills",
       icon: faAtom
     },
     {
-      text:'Services',
+      text: 'Services',
       link: 'Services',
       icon: faBell,
     },
     {
-      text:'Portfolio',
+      text: 'Portfolio',
       link: 'Portfolio',
       icon: faFile,
     },
     {
-      text:'Contact Me',
+      text: 'Contact Me',
       link: 'Contact',
       icon: faMessage,
     },
@@ -80,17 +80,20 @@ function SideBar({modeToggler}) {
           className={`d-flex text-center flex-column  ${styles.sideBar_top}`}
         >
           <div className={`position-relative ${styles.sideBar_logo}`}>
-            <a href="#">
+            <Link to="/"  spy={true} style={{cursor: "pointer"}}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}>
               <Image
                 src="/images/profile-logo.png"
                 alt="Abdul Hadi"
                 width={110}
                 height={110}
               ></Image>
-            </a>
+            </Link>
           </div>
           <h2
-            className={`text-uppercase position-relative ${modeToggler? "": styles.darkMode} ${styles.sideBarTopTitle}`}
+            className={`text-uppercase position-relative ${modeToggler ? "" : styles.darkMode} ${styles.sideBarTopTitle}`}
           >
             Abdul Hadi
           </h2>
@@ -102,14 +105,20 @@ function SideBar({modeToggler}) {
             navigation.map((item) => {
               return (
                 <li key={Math.random()} className={`position-relative ${styles.navigationList}`}>
-                  <Link
-                    href={"#"+item.link}
-                    className={`text-capatalize d-inline-block w-100 h-100 ${modeToggler? styles.LinksAfterEffect: styles.darkModeLinks} ${styles.Links}`}
+                  <Link activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    style={{cursor: "pointer"}}
+                    to={item.link}
+                    className={`text-capatalize d-inline-block w-100 h-100 ${modeToggler ? styles.LinksAfterEffect : styles.darkModeLinks} 
+                    ${styles.Links}`}
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
                       className={styles.iconsSetting + styles.iconsSettingNav}
-                      style={{opacity: 0.8,paddingRight: "3px"}}
+                      style={{ opacity: 0.8, paddingRight: "3px" }}
                     />{' '}
                     {item.text}
                   </Link>
@@ -125,12 +134,12 @@ function SideBar({modeToggler}) {
               <li key={Math.random()}>
                 <a
                   href={item.link}
-                  className={`${modeToggler? "": styles.darkMode} ${styles.Links}`}
+                  className={`${modeToggler ? "" : styles.darkMode} ${styles.Links}`}
                   rel="noreferrer"
                   target={'_blank'}
                 >
                   <FontAwesomeIcon
-                  style={{fontSize: "20px"}}
+                    style={{ fontSize: "20px" }}
                     icon={item.icon}
                     className={styles.iconsSetting}
                   />

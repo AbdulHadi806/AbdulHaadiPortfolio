@@ -25,6 +25,7 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
+    "react-scroll": "^1.8.9",
     "react-spinners": "^0.13.8",
     "react-text-transition": "^3.0.2",
     "swr": "^2.0.2"
