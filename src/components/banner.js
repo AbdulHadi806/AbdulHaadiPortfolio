@@ -8,13 +8,11 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 const TEXTS = ['Forest', 'Building', 'Tree', 'Color']
 function Banner({ modeToggler }) {
     const { data, error } = useSWR('/api/portfolio', fetcher)
-
     const [index, setIndex] = useState(0)
-
     useEffect(() => {
         const intervalId = setInterval(
             () => setIndex((index) => index + 1),
-            2000
+            2500
         )
         return () => clearTimeout(intervalId)
     }, [])
@@ -86,13 +84,14 @@ function Banner({ modeToggler }) {
                         className={`img-fluid position-relative ${styles.myMainImage}`}
                         style={{ borderRadius: '40%' }}
                     ></Image>
+                    <TextTransition springConfig={presets.wobbly}></TextTransition>
                     <label
                         className={`text-capitalize d-block ${
                             modeToggler ? '' : styles.darkMode
                         }`}
                         style={{ fontWeight: 600, fontSize: '19px' }}
                     >
-                        My avatar
+                        My Avatar
                     </label>
                 </div>
             </div>
