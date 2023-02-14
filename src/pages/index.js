@@ -103,7 +103,7 @@ export default function Home() {
                                 className="col-md-12 col-lg-10"
                                 style={{ paddingTop: '50px' }}
                             >
-                                <Services />
+                                <Services modeToggler={modeToggler}/>
                             </div>
                             <div className={styles.separation}></div>
                             <div id="Portfolio" className="col-md-12 col-lg-10">

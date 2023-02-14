@@ -5,13 +5,13 @@ import {Commontitle} from './commonTitle'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-function Services() {
+function Services({modeToggler}) {
   const { data, error } = useSWR('/api/portfolio', fetcher)
   if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
   return (
     <div>
-      <Commontitle  title={data.WhatIDoTitle} className="text-start" icon ={data.skills.arrowimg}/>
+      <Commontitle  title={data.WhatIDoTitle} modeToggler={modeToggler} className="text-start" icon ={data.skills.arrowimg}/>
       <div className="whatIDoInner">
         <div className="row">
           {data.WhatIDo.map((items) => {

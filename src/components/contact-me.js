@@ -23,7 +23,7 @@ export default function Contactme({modeToggler}) {
 
     const { values } = state
 
-    const closeHandler = () => {
+    const closeHandler = ({modeToggler}) => {
         setToggle(true)
         setSuccess(false)
         setError(false)
@@ -78,6 +78,7 @@ export default function Contactme({modeToggler}) {
             <Commontitle
                 title={data.ContactMe.ContactMeTitle}
                 icon={data.skills.arrowimg}
+                modeToggler={modeToggler}
             />
             <div className="row">
                 <div className="col-lg-6 col-xl-5 text-start">
