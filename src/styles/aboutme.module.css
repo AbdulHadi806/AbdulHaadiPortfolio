@@ -1,14 +1,15 @@
 .imges {
     border-radius: 30px;
     margin-top: 7px;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%!important;
+    height: 100%!important;
     object-fit: contain;
 }
 .imgColLeft {
     margin-top: -74px;
     height: auto;
-    width: 482px;
+    max-width: 342px;
+    width:100%
 }
 .aboutMeDecription {
     font-size: 18px;
@@ -78,5 +79,6 @@
     }
     .imgColLeft {
         margin-top: 20px;
+        max-width: 447px;
     }
 }
