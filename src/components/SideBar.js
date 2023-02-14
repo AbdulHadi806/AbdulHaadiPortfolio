@@ -69,7 +69,7 @@ function SideBar({ modeToggler }) {
       icon: faSquareInstagram,
       link: "https://www.instagram.com/abdulhadi.806/"
     }
-  ]
+  ] 
   return (
     <div
       className={`justify-content-between sidenav-menu d-flex flex-column ${styles.container}`}
