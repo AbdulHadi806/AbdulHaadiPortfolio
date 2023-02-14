@@ -6,7 +6,7 @@ import {Commontitle} from './commonTitle'
 import { useState } from 'react'
 ('use client')
 const fetcher = (url) => fetch(url).then((res) => res.json())
-function Portfolio() {
+function Portfolio({modeToggler}) {
   const [isOpen, setOpen] = useState(true)
   const [fullImage, setFullImage] = useState()
   const openHander = (items) => {
@@ -28,8 +28,9 @@ function Portfolio() {
           return (
             <div  key={Math.random()} className={styles.item}>
             <div className={styles.well}> 
-            <button style={{border:"transparent", width:"100%"}} onClick={(e)=> {e.preventDefault() ;openHander(items)}}>
-            <Image className={` img-thumbnail ${styles.zoom}`} src={items.src} width={items.width} height={items.height} alt="PortFolio Images" />
+            <button style={{border:"transparent", width:"100%", background:"transparent"}} onClick={(e)=> {e.preventDefault() ;openHander(items)}}>
+            <Image className={`${modeToggler? "img-thumbnail" : styles.backgroundNone} ${styles.zoom}`} 
+            src={items.src} width={items.width} height={items.height} alt="PortFolio Images" />
             </button>
             </div>
           </div>

@@ -67,10 +67,10 @@
     right: 79px;
     top: 7px;
     font-size: 30px;
-    z-index: 9999;
     border: 1px solid #000;
     padding: 7px;
     width: 41px;
+    z-index: 9999;
     height: 42px;
     border-radius: 43px;
 }

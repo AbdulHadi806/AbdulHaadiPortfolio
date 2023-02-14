@@ -61,13 +61,16 @@
   background-color: transparent;
   background: #000;
 }
-@media (max-width: 1500px) {    
-  .zoom {
-    width: 100%;
-    background-color: initial !important;
-    border: transparent !important;
-    border-radius: initial !important;
+
+.backgroundNone {
+  width: 100%;
+  height: auto;
+  background-color: #000 !important;
+  border: transparent !important;
+  border-radius: 3px;
+  padding: initial !important;
 }
+@media (max-width: 1500px) {    
 .row {
   column-width: 13em;
 }

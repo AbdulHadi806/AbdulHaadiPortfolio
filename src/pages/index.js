@@ -107,7 +107,7 @@ export default function Home() {
                             </div>
                             <div className={styles.separation}></div>
                             <div id="Portfolio" className="col-md-12 col-lg-10">
-                                <Portfolio />
+                                <Portfolio modeToggler={modeToggler}/>
                             </div>
                             <div className={styles.separation}></div>
                             <div id="Contact" className="col-md-12 col-lg-10">
