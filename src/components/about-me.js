@@ -13,41 +13,14 @@ export default function Aboutme({modeToggler}) {
   if (!data) return <div>Loading...</div>
   return (
     <div className="row">
-      <div className="col-md-12 col-lg-5">
-        <div className="row">
-          <div className={`col-md-12 col-lg-5 ${styles.imgColLeft}`}>
+      <div className={`col-md-12 col-lg-5 ${styles.imgColLeft}`}>
             <Image
               src={data.AboutMe.img1}
-              width={270}
+              width={560}
               alt="My Image"
-              height={300}
+              height={441}
               className={`img-fluid ${styles.imges}`}
             />
-            <Image
-              src={data.AboutMe.img1}
-              width={270}
-              alt="My Image"
-              height={300}
-              className={`img-fluid ${styles.imges}`}
-            />
-          </div>
-          <div className={`col-lg-5`}>
-            <Image
-              src={data.AboutMe.img1}
-              width={270}
-              alt="My Image"
-              height={300}
-              className={`img-fluid ${styles.imges}`}
-            />
-            <Image
-              src={data.AboutMe.img1}
-              width={270}
-              height={300}
-              alt="My Image"
-              className={`img-fluid ${styles.imges}`}
-            />
-          </div>
-        </div>
       </div>
       <div className="col-md-12 col-lg-7 text-start">
         <div className={styles.titleRow}>

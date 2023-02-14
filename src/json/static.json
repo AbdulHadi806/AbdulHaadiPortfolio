@@ -6,10 +6,7 @@
         "contactBtn": "Contact Me",
         "portfolioBtn": "Portfolio",
         "arrowimg": "/images/Arrow-aboutUS.png",
-        "img1": "/images/hello-img.png",
-        "img2": "/images/hello-img.png",
-        "img3": "/images/hello-img.png",
-        "img4": "/images/hello-img.png"
+        "img1": "/images/aboutme.jpg"
     },
     "Banner": {
         "titleMain": "Hello, I am",
