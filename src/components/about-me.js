@@ -12,8 +12,8 @@ export default function Aboutme({modeToggler}) {
   if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
   return (
-    <div className="row">
-      <div className={`col-sm-6 col-lg-5 d-flex justify-content-center ${styles.imgColLeft}`}>
+    <div className="row justify-content-center">
+      <div className={`col-sm-6 col-lg-5 d-flex ${styles.imgColLeft}`}>
             <Image
               src={data.AboutMe.img1}
               width={357}
