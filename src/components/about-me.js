@@ -13,10 +13,10 @@ export default function Aboutme({modeToggler}) {
   if (!data) return <div>Loading...</div>
   return (
     <div className="row">
-      <div className={`col-md-12 col-lg-5 ${styles.imgColLeft}`}>
+      <div className={`col-sm-6 col-lg-5 d-flex justify-content-center ${styles.imgColLeft}`}>
             <Image
               src={data.AboutMe.img1}
-              width={560}
+              width={357}
               alt="My Image"
               height={441}
               className={`img-fluid ${styles.imges}`}
