@@ -138,7 +138,7 @@ export default function Home() {
                             <div className={styles.separation} style={{margin: "93px 0 19px 0"}}></div>
                             <div className="col-md-12 col-lg-10">
                                 <p>
-                                    © 2022. All rights reserved by Abdul Hadi.
+                                    © 2023. All rights reserved by Abdul Hadi.
                                 </p>
                             </div>
                         </div>

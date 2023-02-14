@@ -101,8 +101,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  font-weight: 600;
 }
-
+button {
+  font-weight: 600;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

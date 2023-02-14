@@ -103,10 +103,10 @@
     "ContactMe": {
         "ContactMeTitle": "GET IN TOUCH.",
         "ContactRightBox": {
-            "ContactBoxIntro": "What’s your story? \n Get in touch",
+            "ContactBoxIntro": "What’s your story? \n Lets Discuss",
             "ContactBoxDesc": "Always available for freelancing if the right project comes along, Feel free to contact me.",
             "Email": "abdul.806@yahoo.com",
-            "location": "Model Town,\n Islamabad, Pakistan"
+            "location": "Model Town,\nIslamabad, Pakistan"
         }
     }
 }
