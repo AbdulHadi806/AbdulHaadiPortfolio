@@ -76,15 +76,15 @@ function Banner({ modeToggler }) {
                 </div>
             </div>
             <div className="col-md-6">
-                <div className={`text-center ${styles.mainImage}`}>
+                <div className={`text-center position-relative ${styles.mainImage}`}>
                     <Image
                         priority
                         src={data.Banner.MyImage}
                         alt="My Avatar"
                         width={500}
                         height={500}
-                        className={`img-fluid ${styles.myMainImage}`}
-                        style={{ borderRadius: '50%' }}
+                        className={`img-fluid position-relative ${styles.myMainImage}`}
+                        style={{ borderRadius: '40%' }}
                     ></Image>
                     <label
                         className={`text-capitalize d-block ${

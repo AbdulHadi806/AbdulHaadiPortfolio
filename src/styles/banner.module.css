@@ -74,8 +74,21 @@
     padding-top: 50px;
 }
 .myMainImage {
-    border: 2px solid green;
-    background-color: #2fbf71;
+    z-index: 8;
+}
+.mainImage:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 293px;
+    bottom: 24px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    border-radius: 22px;
+    max-height: 347px;
+    height: 100%;
+    z-index: 1;
 }
 @media(max-width:992px){
     .myName {
@@ -89,6 +102,10 @@
 @media(max-width:767px){
     .reverseDirectionMobile{
         flex-direction: column-reverse !important;
+    }
+    .mainImage:before {
+        width: 192px;
+    height: 201px;
     }
     .myMainImage {
        width: 50% !important;

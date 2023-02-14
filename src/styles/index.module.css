@@ -3,7 +3,7 @@
     top: 0;
     animation: animationtoggle .3s both;
     left: 0;
-    padding: 63px 0 10px 0;
+    padding: 61px  0 10px 0;
     bottom: 0;
     z-index: 999;
 }
@@ -17,7 +17,7 @@
     padding: 0 30px;
 }
 .helloSectionOuter {
-    padding: 112px 0 19px 0;
+    padding: 61px 0 19px 0;
 }
 .aboutme {
     padding: 150px 0 100px 0;
