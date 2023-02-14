@@ -89,7 +89,7 @@ function Banner({ modeToggler }) {
                         className={`text-capitalize d-block ${
                             modeToggler ? '' : styles.darkMode
                         }`}
-                        style={{ fontWeight: 600, fontSize: '19px' }}
+                        style={{ fontWeight: 600, fontSize: '19px', marginTop: "3px" }}
                     >
                         My Avatar
                     </label>
