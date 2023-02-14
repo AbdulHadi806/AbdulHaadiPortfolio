@@ -42,6 +42,10 @@
     background-color: #0b0b13 !important;
     color: #fff !important;
 }
+.InputDarkMode {
+    background-color: transparent;
+    color: #fff;
+}
 .forms {
     height: auto;
     flex-direction: column;

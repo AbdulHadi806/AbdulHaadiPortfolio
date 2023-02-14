@@ -149,7 +149,7 @@ export default function Contactme({modeToggler}) {
                                         <input
                                             type="text"
                                             id="form4Example1"
-                                            className="form-control"
+                                            className={`form-control ${modeToggler? "" : styles.InputDarkMode}`}
                                             name="name"
                                             placeholder="Name *"
                                             onChange={handleChange}
@@ -165,8 +165,9 @@ export default function Contactme({modeToggler}) {
                                             type="email"
                                             id="form4Example2"
                                             name="email"
+                                            
                                             onChange={handleChange}
-                                            className="form-control"
+                                            className={`form-control ${modeToggler? "" : styles.InputDarkMode}`}
                                             placeholder="Email *"
                                             value={values && values.email}
                                             autoComplete="off"
@@ -181,7 +182,7 @@ export default function Contactme({modeToggler}) {
                                         id="form4Example2"
                                         name="subject"
                                         onChange={handleChange}
-                                        className="form-control"
+                                        className={`form-control ${modeToggler? "" : styles.InputDarkMode}`}
                                         placeholder="subject *"
                                         value={values && values.subject}
                                         autoComplete="off"
@@ -191,7 +192,7 @@ export default function Contactme({modeToggler}) {
                             <div className="form-outline mb-4">
                                 <textarea
                                     className={
-                                        'form-control ' + styles.textarea
+                                        `form-control ${styles.textarea}  ${modeToggler? "" : styles.InputDarkMode}`
                                     }
                                     id="form4Example3"
                                     onChange={handleChange}
