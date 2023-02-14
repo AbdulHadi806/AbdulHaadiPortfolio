@@ -3,7 +3,12 @@
           letter-spacing: 7px;
           font-size: 46px;
           font-weight: 400;
-          color: #0b0b13
+}
+.brightMode {
+    color: #0b0b13;
+}
+.darkMode {
+    color: #fff;
 }
 @media(max-width:767px){
     .commonTile {

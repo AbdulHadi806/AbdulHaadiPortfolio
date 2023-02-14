@@ -57,11 +57,20 @@
     position: absolute;
     height: 1px;
 }
+.darkMode {
+    color: #fff;
+}
 .iconsSetting {
     font-size: 14px;
 }
-.iconsSetting:hover {
-    color: #000;
+.Links:hover .iconsSetting {
+    color: #2FBF71 !important;
+}
+.darkModeLinks {
+    color: #fff;
+}
+.darkModeLinks:hover .iconSetting{
+    color: #fff;
 }
 .socialMediaRow {
     padding-top: 44px;

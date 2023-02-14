@@ -38,6 +38,15 @@
     display: inline-block;
     transition: .2s all ease-in-out;
 }
+.darkMode {
+    color: #fff;
+}
+.darkModeBtn {
+    transition: .2s all ease-in-out;
+}
+.darkModeBtn:hover {
+    background-color: #fff;
+}
 
 .goPortfolio:hover .linkBut{
     color: #000 !important;

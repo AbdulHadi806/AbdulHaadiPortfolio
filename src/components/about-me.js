@@ -6,7 +6,7 @@ import {Commontitle} from './commonTitle'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-export default function Aboutme() {
+export default function Aboutme({modeToggler}) {
   const { data, error } = useSWR('/api/portfolio', fetcher)
 
   if (error) return <div>Failed to load</div>
@@ -51,20 +51,20 @@ export default function Aboutme() {
       </div>
       <div className="col-md-12 col-lg-7 text-start">
         <div className={styles.titleRow}>
-          <Commontitle title={data.AboutMe.titleMain} icon ={data.skills.arrowimg}/>
-          <h3 className={styles.mainHeadingAboutme}>
+          <Commontitle title={data.AboutMe.titleMain} modeToggler={modeToggler} icon ={data.skills.arrowimg}/>
+          <h3 className={`${modeToggler? "" : styles.darkMode} ${styles.mainHeadingAboutme}`}>
             {data.AboutMe.titleSecondary}
           </h3>
-          <p className={styles.aboutMeDecription}>{data.AboutMe.description}</p>
+          <p className={`${modeToggler? "" : styles.darkMode} ${styles.aboutMeDecription}`}>{data.AboutMe.description}</p>
         </div>
         <div className={`d-flex ${styles.buttonRow}`}>
           <div className={`text-center ${styles.btns}`}>
-            <Link href="#Contact" className={`text-decoration-none d-block ${styles.links}`}>
+            <Link href="#Contact" className={`text-decoration-none d-block ${modeToggler? "": styles.darkModeBtn} ${styles.links}`}>
               {data.AboutMe.contactBtn}
             </Link>
           </div>
           <div className={`text-center ${styles.btns}`}>
-            <Link href="#Portfolio" className={`text-decoration-none d-block ${styles.links}`}>
+            <Link href="#Portfolio" className={`text-decoration-none d-block ${modeToggler? "": styles.darkModeBtn} ${styles.links}`}>
               {data.AboutMe.portfolioBtn}
             </Link>
           </div>

@@ -11,7 +11,7 @@ function Services() {
   if (!data) return <div>Loading...</div>
   return (
     <div>
-      <Commontitle title={data.WhatIDoTitle} className="text-start" icon ={data.skills.arrowimg}/>
+      <Commontitle  title={data.WhatIDoTitle} className="text-start" icon ={data.skills.arrowimg}/>
       <div className="whatIDoInner">
         <div className="row">
           {data.WhatIDo.map((items) => {

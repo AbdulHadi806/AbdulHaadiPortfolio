@@ -13,7 +13,7 @@ const initValues = { name: '', email: '', subject: '', message: '' }
 const initState = { values: initValues }
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-export default function Contactme() {
+export default function Contactme({modeToggler}) {
     const [state, setState] = useState(initState)
     const [success, setSuccess] = useState(false)
     const [isloading, setIsLoading] = useState(false)
@@ -81,11 +81,11 @@ export default function Contactme() {
             />
             <div className="row">
                 <div className="col-lg-6 col-xl-5 text-start">
-                    <div className={`${styles.RightBox}`}>
+                    <div className={`${modeToggler? "" : styles.darkMode} ${styles.RightBox}`}>
                         <h4 style={{whiteSpace: 'pre-line'}}>
                             {data.ContactMe.ContactRightBox.ContactBoxIntro}
                         </h4>
-                        <p style={{ color: '#555555' }}>
+                        <p className={modeToggler? "" : styles.darkMode} style={{ color: '#555555' }}>
                             {data.ContactMe.ContactRightBox.ContactBoxDesc}
                         </p>
                         <span className="d-flex h5">
@@ -101,9 +101,9 @@ export default function Contactme() {
                                 icon={faEnvelope}
                             />
                             <Link
-                                className={
-                                    'text-decoration-none  ' +
-                                    styles.Email
+                                className={`
+                                    text-decoration-none 
+                                    ${styles.Email} ${modeToggler? "" : styles.darkMode}`
                                 }
                                 href={
                                     'mailto:' +
@@ -116,14 +116,14 @@ export default function Contactme() {
                     </div>
                 </div>
                 <div className="col-lg-6 col-xl-7">
-                    <div className={`d-flex justify-content-center ${styles.forms}`}>
-                        <label className="fw-bold" style={{fontSize: "20px"}}>Get In Touch With Me Directly</label>
+                    <div className={`d-flex justify-content-center ${modeToggler? "" : styles.darkMode}  ${styles.forms}`}>
+                        <label className={`fw-bold ${modeToggler? "" : styles.darkMode}`} style={{fontSize: "20px"}}>Get In Touch With Me Directly</label>
                         <form
                             onSubmit={(e) => {
                                 e.preventDefault()
                                 onSubmit()
                             }}
-                            className={styles.forms}
+                            className={`${modeToggler? "" : styles.darkMode} ${styles.forms}`}
                         >
                             <div className="row">
                                 {success ? (

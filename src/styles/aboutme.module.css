@@ -28,6 +28,15 @@
     color: #fff;
     text-decoration: none;
 }
+.darkMode {
+    color: #fff ;
+}
+.darkModeBtn {
+    transition: .2s all ease-in-out;
+}
+.darkModeBtn:hover {
+    background-color: #fff;
+}
 .btns:hover {
     background-color: transparent;
     border: 1px solid #000;

@@ -6,6 +6,7 @@ import {
   faGithub,
   faLinkedin,
   faSkype,
+  faSquareInstagram
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faHouse,
@@ -18,7 +19,7 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function SideBar() {
+function SideBar({modeToggler}) {
   const navigation = [
     {
       text:'Home',
@@ -63,6 +64,10 @@ function SideBar() {
     {
       icon: faSkype,
       link: 'https://join.skype.com/invite/w4gMPkxmGojb',
+    },
+    {
+      icon: faSquareInstagram,
+      link: "https://www.instagram.com/abdulhadi.806/"
     }
   ]
   return (
@@ -85,7 +90,7 @@ function SideBar() {
             </a>
           </div>
           <h2
-            className={`text-uppercase position-relative ${styles.sideBarTopTitle}`}
+            className={`text-uppercase position-relative ${modeToggler? "": styles.darkMode} ${styles.sideBarTopTitle}`}
           >
             Abdul Hadi
           </h2>
@@ -99,7 +104,7 @@ function SideBar() {
                 <li key={Math.random()} className={`position-relative ${styles.navigationList}`}>
                   <Link
                     href={"#"+item.link}
-                    className={`text-uppercase d-inline-block w-100 h-100 ${styles.Links}`}
+                    className={`text-uppercase d-inline-block w-100 h-100 ${modeToggler? "": styles.darkModeLinks} ${styles.Links}`}
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
@@ -120,7 +125,7 @@ function SideBar() {
               <li key={Math.random()}>
                 <a
                   href={item.link}
-                  className={styles.Links}
+                  className={`${modeToggler? "": styles.darkMode} ${styles.Links}`}
                   rel="noreferrer"
                   target={'_blank'}
                 >

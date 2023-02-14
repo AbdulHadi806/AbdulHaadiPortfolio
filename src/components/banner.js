@@ -6,7 +6,7 @@ import styles from '../styles/banner.module.css'
 import TextTransition, { presets } from 'react-text-transition'
 const fetcher = (url) => fetch(url).then((res) => res.json())
 const TEXTS = ['Forest', 'Building', 'Tree', 'Color']
-function Banner() {
+function Banner({modeToggler}) {
     const { data, error } = useSWR('/api/portfolio', fetcher)
 
     const [index, setIndex] = useState(0)
@@ -23,13 +23,13 @@ function Banner() {
     return (
         <div className={`row text-start ${styles.reverseDirectionMobile}`}>
             <div className={`col-md-6  ${styles.leftSide}`}>
-                <h1 className={styles.helloIAm}>
+                <h1 className={`${modeToggler? "": styles.darkMode} ${styles.helloIAm}`}>
                     {data.Banner.titleMain}{' '}
-                    <span className={styles.myName}>
+                    <span className={`${modeToggler? "": styles.darkMode} ${styles.myName}`}>
                         {data.Banner.titleSecondary}
                     </span>
                 </h1>
-                <h3 className={`d-flex`} style={{gap:"12px", flexWrap:"wrap"}}>
+                <h3 className={`d-flex ${modeToggler? "": styles.darkMode}`} style={{gap:"12px", flexWrap:"wrap"}}>
                     {data.Banner.TitleIAm}{' '}
                     <span className={styles.changeTextLoop}>
                         <TextTransition springConfig={presets.wobbly}>
@@ -41,12 +41,12 @@ function Banner() {
                         </TextTransition>
                     </span>
                 </h3>
-                <p className={` ${styles.aboutMe}`}>
+                <p className={`${modeToggler? "": styles.darkMode} ${styles.aboutMe}`}>
                     {data.Banner.MyDescription}
                 </p>
                 <div className={` ${styles.goPortfolio}`}>
                     <Link
-                        className={`text-decoration-none ` + styles.linkBut}
+                        className={`text-decoration-none ${modeToggler? "": styles.darkModeBtn} ${styles.linkBut}`}
                         href={'#Portfolio'}
                         style={{ color: '#fff' }}
                     >
