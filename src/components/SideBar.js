@@ -80,7 +80,7 @@ function SideBar({ modeToggler }) {
           className={`d-flex text-center flex-column  ${styles.sideBar_top}`}
         >
           <div className={`position-relative ${styles.sideBar_logo}`}>
-            <Link to="/"  spy={true} style={{cursor: "pointer"}}
+            <Link to="Home"  spy={true} style={{cursor: "pointer"}}
                     smooth={true}
                     offset={-70}
                     duration={500}>
