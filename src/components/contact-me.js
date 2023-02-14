@@ -7,6 +7,7 @@ import { faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { sendContactForm } from 'lib/api'
 import { Alertbox1, Alertbox2 } from './alertbox'
+import ClipLoader from 'react-spinners/ClipLoader'
 ('use client')
 
 const initValues = { name: '', email: '', subject: '', message: '' }
@@ -220,7 +221,12 @@ export default function Contactme({modeToggler}) {
                                 isloading={isloading}
                                 disabled={isloading}
                             >
-                                Send
+                                {isloading ? <ClipLoader
+                    color={'#fff'}
+                    size={20}
+                    aria-label="Loading Spinner"
+                    data-testid="loader"
+                />: "Send"}
                             </button>
                         </form>
                     </div>
