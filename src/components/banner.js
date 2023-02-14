@@ -61,7 +61,7 @@ function Banner({modeToggler}) {
                         src={data.Banner.MyImage}
                         alt="My Avatar"
                         width={500}
-                        height={500}
+                        height={500} 
                         className={`img-fluid ${styles.myMainImage}`}
                         style={{ borderRadius: '50%' }}
                     ></Image>
