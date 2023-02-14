@@ -117,16 +117,14 @@
     }
     .navigationButton span {
         background-color: #fff;
-        height: 1px;
-        left: 4px;
-        width: 28px;
+        height: 2px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 25px;
         top: 6px;
         position: absolute;
         transition: .2s all ease-in-out;
-    }
-    .navigationButton:hover span {
-        rotate: 42deg;
-        top: 16px;
     }
     .container {
         padding: 0 40px;
@@ -135,16 +133,13 @@
         top: 14px !important;
         transition: .2s all ease-in-out;
     }   
-    .navigationButton:hover .navToggle2 {
-        display: none;
+    .clicked { 
+        width: 13px !important;
+        right: -8px !important;
     }
     .navToggle3 {
         top: 21px !important;
         transition: .2s all ease-in-out;
-    }
-    .navigationButton:hover .navToggle3 {
-        rotate: -42deg;
-        top: 16px !important;
     }
     .headerResponsive {
         display: block;

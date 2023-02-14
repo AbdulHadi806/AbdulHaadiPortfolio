@@ -23,6 +23,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 export default function Home() {
     const [toggler, setToggeler] = useState(false)
     const [modeToggler, setModeToggler] = useState(false)
+    const [clickCss, setClickCss] = useState(false)
     const { data, error } = useSWR('/api/portfolio', fetcher)
 
     const setToggelerChangeHandler = () => {
@@ -31,7 +32,9 @@ export default function Home() {
     const modeChangerHander = () => {
         setModeToggler(!modeToggler)
     }
-
+    const clickCssHandler = () => {
+        setClickCss(!clickCss)
+    }
 
     if (error) return <div>Failed to load</div>
     if (!data)
@@ -65,11 +68,11 @@ export default function Home() {
                     Abdul Hadi
                 </a>
                 <button
-                    onClick={setToggelerChangeHandler}
+                    onClick={(e)=>{clickCssHandler(e);setToggelerChangeHandler()}}
                     className={`display-none position-relative ${styles.navigationButton}`}
                 >
                     <span></span>
-                    <span className={styles.navToggle2}></span>
+                    <span className={`${styles.navToggle2} ${clickCss ? styles.clicked : ""}`}></span>
                     <span className={styles.navToggle3}></span>
                 </button>
             </div>
