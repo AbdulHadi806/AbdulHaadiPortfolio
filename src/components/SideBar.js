@@ -13,7 +13,7 @@ import {
   faBell,
   faFile,
   faMessage,
-  faAtom
+  faAtom,
 } from '@fortawesome/free-solid-svg-icons'
 import { Link, animateScroll as scroll } from "react-scroll";
 

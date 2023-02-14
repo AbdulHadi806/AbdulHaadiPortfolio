@@ -28,7 +28,8 @@ const Skillsrow = ({modeToggler}) => {
                                 style={{
                                     fontSize: '17px',
                                     color: '#0b0b13',
-                                    fontWeight: 400,
+                                    fontWeight: 600,
+                                    letterSpacing: "1px"
                                 }}
                             >
                                 {item.skill}

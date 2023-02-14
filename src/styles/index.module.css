@@ -17,7 +17,7 @@
     padding: 0 30px;
 }
 .helloSectionOuter {
-    padding: 112px 0 100px 0;
+    padding: 112px 0 19px 0;
 }
 .aboutme {
     padding: 150px 0 100px 0;
@@ -89,6 +89,9 @@
 @media ( max-width:1200px ) {
     .responsiveNav {
         display: none;
+    }
+    .separation:after {
+        width: 100% !important;
     }
     .bgLight {
         background-color: rgba(238, 239, 216, 0.3);

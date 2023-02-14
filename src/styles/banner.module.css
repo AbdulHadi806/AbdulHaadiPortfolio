@@ -75,6 +75,7 @@
 }
 .myMainImage {
     border: 2px solid green;
+    background-color: #2fbf71;
 }
 @media(max-width:992px){
     .myName {

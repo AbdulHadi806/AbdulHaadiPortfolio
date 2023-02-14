@@ -122,6 +122,11 @@ export default function Home() {
                             <div id="Contact" className="col-md-12 col-lg-10">
                                 <Contactme modeToggler={modeToggler} />
                             </div>
+                            <div className={styles.separation}></div>
+                            <div className="col-md-12 col-lg-10">
+                                <h3>Abdul Hadi</h3>
+                                <p>© 2022. All rights reserved by Abdul Hadi.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -59,12 +59,13 @@ function Banner({modeToggler}) {
                     <Image
                         priority
                         src={data.Banner.MyImage}
-                        alt="Abdul Hadi"
+                        alt="My Avatar"
                         width={500}
                         height={500}
                         className={`img-fluid ${styles.myMainImage}`}
                         style={{ borderRadius: '50%' }}
                     ></Image>
+                    <label className='text-capitalize' style={{fontWeight: 600, fontSize: "19px"}}>My avatar</label>
                 </div>
             </div>
         </div>
