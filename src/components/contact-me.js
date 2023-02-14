@@ -89,7 +89,7 @@ export default function Contactme({modeToggler}) {
                         <p className={modeToggler? "" : styles.darkMode} style={{ color: '#555555' }}>
                             {data.ContactMe.ContactRightBox.ContactBoxDesc}
                         </p>
-                        <span className="d-flex h5">
+                        <span className="d-flex h5" style={{whiteSpace: "pre"}}>
                             <FontAwesomeIcon
                                 style={{ color: 'green', paddingRight: '7px' }}
                                 icon={faLocationDot}

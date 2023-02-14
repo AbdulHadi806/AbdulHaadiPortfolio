@@ -54,7 +54,7 @@ export default function Home() {
                 className={`position-fixed ${modeToggler? styles.modeChangerLight : styles.modeChangerDark}`}
             />
             <div 
-                className={`${toggler == false ? styles.bgColor : ''}  ${
+                className={`${toggler == false && modeToggler? styles.bgColor : styles.bgLight}  ${
                     styles.headerResponsive
                 } d-flex position-fixed justify-content-between container-fluid`}
             >
