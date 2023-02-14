@@ -65,7 +65,7 @@ function Banner({modeToggler}) {
                         className={`img-fluid ${styles.myMainImage}`}
                         style={{ borderRadius: '50%' }}
                     ></Image>
-                    <label className='text-capitalize' style={{fontWeight: 600, fontSize: "19px"}}>My avatar</label>
+                    <label className={`text-capitalize ${modeToggler? "": styles.darkMode}`} style={{fontWeight: 600, fontSize: "19px"}}>My avatar</label>
                 </div>
             </div>
         </div>
