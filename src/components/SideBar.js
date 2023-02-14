@@ -104,11 +104,11 @@ function SideBar({modeToggler}) {
                 <li key={Math.random()} className={`position-relative ${styles.navigationList}`}>
                   <Link
                     href={"#"+item.link}
-                    className={`text-uppercase d-inline-block w-100 h-100 ${modeToggler? "": styles.darkModeLinks} ${styles.Links}`}
+                    className={`text-uppercase d-inline-block w-100 h-100 ${modeToggler? styles.LinksAfterEffect: styles.darkModeLinks} ${styles.Links}`}
                   >
                     <FontAwesomeIcon
                       icon={item.icon}
-                      className={styles.iconsSetting}
+                      className={styles.iconsSetting + styles.iconsSettingNav}
                       style={{opacity: 0.8,paddingRight: "3px"}}
                     />{' '}
                     {item.text}

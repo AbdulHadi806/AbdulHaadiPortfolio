@@ -13,20 +13,26 @@ import ClipLoader from 'react-spinners/ClipLoader'
 import useSWR from 'swr'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+('use client')
 
-;('use client')
+
 const inter = Inter({ subsets: ['latin'] })
 const fetcher = (url) => fetch(url).then((res) => res.json())
+
+
 export default function Home() {
     const [toggler, setToggeler] = useState(false)
     const [modeToggler, setModeToggler] = useState(true)
     const { data, error } = useSWR('/api/portfolio', fetcher)
+
     const setToggelerChangeHandler = () => {
         setToggeler((prevCheck) => !prevCheck)
     }
     const modeChangerHander = () => {
         setModeToggler(!modeToggler)
     }
+
+
     if (error) return <div>Failed to load</div>
     if (!data)
         return (
@@ -73,7 +79,7 @@ export default function Home() {
                         toggler ? styles.sideBarOuter : styles.responsiveNav
                     }`}
                 >
-                    <SideBar modeToggler={modeToggler} />
+                    <SideBar modeToggler={modeToggler}  />
                 </div>
                 <div
                     className={`col-sm-12 col-xl-10 text-center container offset-xl-3  ${styles.helloSectionOuter}`}

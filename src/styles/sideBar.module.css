@@ -48,7 +48,7 @@
 .navigationList:hover a{
     color: #fff;
 }
-.Links::after {
+.LinksAfterEffect::after {
     content: "";
     width: 100%;
     background-color: #efeff8;
@@ -66,8 +66,20 @@
 .Links:hover .iconsSetting {
     color: #2FBF71 !important;
 }
+.Links:hover .iconsSettingNav {
+    color: #fff;
+}
 .darkModeLinks {
     color: #fff;
+}
+.darkModeLinks:after {
+    content: "";
+    width: 100%;
+    background-color: #10101a;
+    bottom: -1px;
+    left: 0;
+    position: absolute;
+    height: 1px;
 }
 .darkModeLinks:hover .iconSetting{
     color: #fff;
