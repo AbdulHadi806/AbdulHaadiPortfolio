@@ -86,21 +86,22 @@
     color: #fff;
     background-color: #000;
 }
-.bgLight {
-    background-color: rgba(238, 239, 216, 0.3);
-}
-.bgLight a {
-    color: #fff;
-}
 @media ( max-width:1200px ) {
     .responsiveNav {
         display: none;
+    }
+    .bgLight {
+        background-color: rgba(238, 239, 216, 0.3);
+    }
+    .bgLight a {
+        color: #fff;
     }
     .navigationButton:focus .navToggle2{
         width: 21px;
     } .modeChangerDark, .modeChangerLight{   
     top: 11px;
     padding: 7px;
+    right: 61px;
     width: 25px;
     z-index: 9999;
     height: 26px;
