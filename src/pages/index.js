@@ -137,7 +137,7 @@ export default function Home() {
                             </div>
                             <div className={styles.separation} style={{margin: "93px 0 19px 0"}}></div>
                             <div className="col-md-12 col-lg-10">
-                                <p>
+                                <p style={modeToggler? {color:"#000"}: {color:"#fff"}}>
                                     © 2023. All rights reserved by Abdul Hadi.
                                 </p>
                             </div>
