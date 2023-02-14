@@ -108,3 +108,22 @@ a {
     color-scheme: dark;
   }
 }
+@media (min-width: 2000px){
+  .row { 
+    justify-content: center;
+  }
+  p {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  a {
+    font-size: 21px;
+    line-height: 31px;
+  }
+}

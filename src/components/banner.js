@@ -6,7 +6,7 @@ import styles from '../styles/banner.module.css'
 import TextTransition, { presets } from 'react-text-transition'
 const fetcher = (url) => fetch(url).then((res) => res.json())
 const TEXTS = ['Forest', 'Building', 'Tree', 'Color']
-function Banner({modeToggler}) {
+function Banner({ modeToggler }) {
     const { data, error } = useSWR('/api/portfolio', fetcher)
 
     const [index, setIndex] = useState(0)
@@ -23,13 +23,24 @@ function Banner({modeToggler}) {
     return (
         <div className={`row text-start ${styles.reverseDirectionMobile}`}>
             <div className={`col-md-6  ${styles.leftSide}`}>
-                <h1 className={`${modeToggler? "": styles.darkMode} ${styles.helloIAm}`}>
+                <h1
+                    className={`${modeToggler ? '' : styles.darkMode} ${
+                        styles.helloIAm
+                    }`}
+                >
                     {data.Banner.titleMain}{' '}
-                    <span className={`${modeToggler? "": styles.darkMode} ${styles.myName}`}>
+                    <span
+                        className={`${modeToggler ? '' : styles.darkMode} ${
+                            styles.myName
+                        }`}
+                    >
                         {data.Banner.titleSecondary}
                     </span>
                 </h1>
-                <h3 className={`d-flex ${modeToggler? "": styles.darkMode}`} style={{gap:"12px", flexWrap:"wrap"}}>
+                <h3
+                    className={`d-flex ${modeToggler ? '' : styles.darkMode}`}
+                    style={{ gap: '12px', flexWrap: 'wrap' }}
+                >
                     {data.Banner.TitleIAm}{' '}
                     <span className={styles.changeTextLoop}>
                         <TextTransition springConfig={presets.wobbly}>
@@ -41,12 +52,22 @@ function Banner({modeToggler}) {
                         </TextTransition>
                     </span>
                 </h3>
-                <p className={`${modeToggler? "": styles.darkMode} ${styles.aboutMe}`}>
+                <p
+                    className={`${modeToggler ? '' : styles.darkMode} ${
+                        styles.aboutMe
+                    }`}
+                >
                     {data.Banner.MyDescription}
                 </p>
-                <div className={` ${modeToggler? styles.goPortfolio: styles.darkModeBtn} `}>
+                <div
+                    className={` ${
+                        modeToggler ? styles.goPortfolio : styles.darkModeBtn
+                    } `}
+                >
                     <Link
-                        className={`text-decoration-none ${modeToggler? "": styles.darkModeBtn} ${styles.linkBut}`}
+                        className={`text-decoration-none ${
+                            modeToggler ? '' : styles.darkModeBtn
+                        } ${styles.linkBut}`}
                         href={'#Portfolio'}
                         style={{ color: '#fff' }}
                     >
@@ -61,11 +82,18 @@ function Banner({modeToggler}) {
                         src={data.Banner.MyImage}
                         alt="My Avatar"
                         width={500}
-                        height={500} 
+                        height={500}
                         className={`img-fluid ${styles.myMainImage}`}
                         style={{ borderRadius: '50%' }}
                     ></Image>
-                    <label className={`text-capitalize ${modeToggler? "": styles.darkMode}`} style={{fontWeight: 600, fontSize: "19px"}}>My avatar</label>
+                    <label
+                        className={`text-capitalize d-block ${
+                            modeToggler ? '' : styles.darkMode
+                        }`}
+                        style={{ fontWeight: 600, fontSize: '19px' }}
+                    >
+                        My avatar
+                    </label>
                 </div>
             </div>
         </div>

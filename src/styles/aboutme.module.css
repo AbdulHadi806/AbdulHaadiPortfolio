@@ -77,4 +77,12 @@
         padding-bottom: 8px;
         padding-top: 50px;
     }
+    .imgColLeft {
+        margin-top: 20px;
+    }
+}
+@media(max-width: 767px){
+    .imges{
+        width: 124px;
+    }
 }
