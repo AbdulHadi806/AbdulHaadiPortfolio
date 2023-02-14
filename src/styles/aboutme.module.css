@@ -16,6 +16,14 @@
     padding-top: 52px;
     gap: 30px;
 }
+.darkModeBtnMain {
+    box-shadow: 5px 5px #fff !important;
+}
+.darkModeBtnMain:hover {
+    box-shadow: initial !important; 
+    border: initial !important;
+}
+
 .btns {
     background-color: #2fbf71;
     width: 132px;
@@ -24,7 +32,6 @@
     box-shadow: 5px 5px #000;
     line-height: 39px;
     transition: .3s all ease-in;
-    border: 1px solid transparent;
     color: #fff;
     text-decoration: none;
 }

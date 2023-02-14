@@ -22,7 +22,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Home() {
     const [toggler, setToggeler] = useState(false)
-    const [modeToggler, setModeToggler] = useState(true)
+    const [modeToggler, setModeToggler] = useState(false)
     const { data, error } = useSWR('/api/portfolio', fetcher)
 
     const setToggelerChangeHandler = () => {

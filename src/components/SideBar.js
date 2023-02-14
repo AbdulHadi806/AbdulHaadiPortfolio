@@ -104,7 +104,7 @@ function SideBar({modeToggler}) {
                 <li key={Math.random()} className={`position-relative ${styles.navigationList}`}>
                   <Link
                     href={"#"+item.link}
-                    className={`text-uppercase d-inline-block w-100 h-100 ${modeToggler? styles.LinksAfterEffect: styles.darkModeLinks} ${styles.Links}`}
+                    className={`text-capatalize d-inline-block w-100 h-100 ${modeToggler? styles.LinksAfterEffect: styles.darkModeLinks} ${styles.Links}`}
                   >
                     <FontAwesomeIcon
                       icon={item.icon}

@@ -43,7 +43,6 @@
 }
 .navigationList:hover {
     background-color: rgb(63, 59, 59);
-    border: 1px solid rgb(135, 133, 133);
 }
 .navigationList:hover a{
     color: #fff;

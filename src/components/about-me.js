@@ -58,12 +58,12 @@ export default function Aboutme({modeToggler}) {
           <p className={`${modeToggler? "" : styles.darkMode} ${styles.aboutMeDecription}`}>{data.AboutMe.description}</p>
         </div>
         <div className={`d-flex ${styles.buttonRow}`}>
-          <div className={`text-center ${styles.btns}`}>
+          <div className={`text-center ${modeToggler? "": styles.darkModeBtnMain} ${styles.btns}`}>
             <Link href="#Contact" className={`text-decoration-none d-block ${modeToggler? "": styles.darkModeBtn} ${styles.links}`}>
               {data.AboutMe.contactBtn}
             </Link>
           </div>
-          <div className={`text-center ${styles.btns}`}>
+          <div className={`text-center ${modeToggler? "": styles.darkModeBtnMain} ${styles.btns}`}>
             <Link href="#Portfolio" className={`text-decoration-none d-block ${modeToggler? "": styles.darkModeBtn} ${styles.links}`}>
               {data.AboutMe.portfolioBtn}
             </Link>

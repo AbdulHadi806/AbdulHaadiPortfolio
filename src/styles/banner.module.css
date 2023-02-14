@@ -43,11 +43,22 @@
 }
 .darkModeBtn {
     transition: .2s all ease-in-out;
+    background-color: #2fbf71;
+    width: 206px;
+    height: 37px;
+    cursor: pointer;
+    line-height: 2;
+    box-shadow: 5px 5px;
+    text-align: center;
+    transition: .3s all ease-in;
+    border: 1px solid transparent;
 }
 .darkModeBtn:hover {
     background-color: #fff;
 }
-
+.darkModeBtn:hover .linkBut {
+    color: #000 !important;
+}
 .goPortfolio:hover .linkBut{
     color: #000 !important;
 }

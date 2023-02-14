@@ -44,7 +44,7 @@ function Banner({modeToggler}) {
                 <p className={`${modeToggler? "": styles.darkMode} ${styles.aboutMe}`}>
                     {data.Banner.MyDescription}
                 </p>
-                <div className={` ${styles.goPortfolio}`}>
+                <div className={` ${modeToggler? styles.goPortfolio: styles.darkModeBtn} `}>
                     <Link
                         className={`text-decoration-none ${modeToggler? "": styles.darkModeBtn} ${styles.linkBut}`}
                         href={'#Portfolio'}
