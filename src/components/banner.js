@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import useSWR from 'swr'
 import React, { useEffect, useState } from 'react'
 import styles from '../styles/banner.module.css'
 import TextTransition, { presets } from 'react-text-transition'
 import { motion, Variants } from 'framer-motion'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -130,7 +130,11 @@ function Banner({ modeToggler }) {
                         modeToggler ? styles.goPortfolio : styles.darkModeBtn
                     } `}
                 >
-                    <Link
+                    <Link to="Portfolio"
+                     spy={true}
+                     smooth={true}
+                     offset={-70}
+                     duration={400}
                         className={`text-decoration-none ${
                             modeToggler ? '' : styles.darkModeBtn
                         } ${styles.linkBut}`}

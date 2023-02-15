@@ -110,7 +110,7 @@ function SideBar({ modeToggler }) {
                     spy={true}
                     smooth={true}
                     offset={-70}
-                    duration={500}
+                    duration={400}
                     style={{cursor: "pointer"}}
                     to={item.link}
                     className={`text-capatalize d-inline-block w-100 h-100 ${modeToggler ? styles.LinksAfterEffect : styles.darkModeLinks} 

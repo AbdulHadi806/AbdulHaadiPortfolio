@@ -1,9 +1,9 @@
 import useSWR from 'swr'
 import Image from 'next/image'
 import styles from '../styles/aboutme.module.css'
-import Link from 'next/link'
 import { Commontitle } from './commonTitle'
 import { motion, Variants } from 'framer-motion'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -101,7 +101,11 @@ export default function Aboutme({ modeToggler }) {
                         } ${styles.btns}`}
                     >
                         <Link
-                            href="#Contact"
+                            to ="Contact"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={400}
                             className={`text-decoration-none d-block ${
                                 modeToggler ? '' : styles.darkModeBtn
                             } ${styles.links}`}
@@ -115,7 +119,11 @@ export default function Aboutme({ modeToggler }) {
                         } ${styles.btns}`}
                     >
                         <Link
-                            href="#Portfolio"
+                         spy={true}
+                         smooth={true}
+                         offset={-70}
+                         duration={400}
+                            to="Portfolio"
                             className={`text-decoration-none d-block ${
                                 modeToggler ? '' : styles.darkModeBtn
                             } ${styles.links}`}
