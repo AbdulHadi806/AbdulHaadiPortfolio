@@ -42,7 +42,7 @@ function Banner({ modeToggler }) {
         onscreen: {
             x: 0,
             opacity: 1,
-            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.5 },
+            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.3 },
         },
     }
     const h3Animation = {
@@ -50,7 +50,7 @@ function Banner({ modeToggler }) {
         onscreen: {
             x: 0,
             opacity: 1,
-            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.7 },
+            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.5 },
         },
     }
     const pAnimation = {
@@ -58,7 +58,7 @@ function Banner({ modeToggler }) {
         onscreen: {
             x: 0,
             opacity: 1,
-            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.9 },
+            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.7 },
         },
     }
     const buttonAnimation = {
@@ -83,7 +83,7 @@ function Banner({ modeToggler }) {
         <div className={`row text-start ${styles.reverseDirectionMobile}`}>
             <motion.div initial={'offscreen'}
                     whileInView={'onscreen'}
-                    viewport={{ once: false, amount: 0.5 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     transition={{ staggerChildren: 0.5 }} className={`col-md-6  ${styles.leftSide}`}>
                 <motion.h1
                     className={`${modeToggler ? '' : styles.darkMode} ${
@@ -145,7 +145,7 @@ function Banner({ modeToggler }) {
                 <motion.div
                     initial={'offscreen'}
                     whileInView={'onscreen'}
-                    viewport={{ once: false, amount: 0.5 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     transition={{ staggerChildren: 0.5 }}
                     className={`text-center position-relative ${styles.mainImage}`}
                 >

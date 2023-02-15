@@ -1,10 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from "../styles/common.module.css"
+import { motion, Variants } from 'framer-motion'
 
-export  const  Commontitle = ({title, icon,modeToggler}) => {
+export  const  Commontitle = ({title, icon,modeToggler,mainHeadingAnimation}) => {
   return (
-    <h2 
+    <motion.h2 transition={{
+      bounce: 0.9,
+      duration: 0.4,
+      delay: 0.1,
+  }} variants={mainHeadingAnimation}
         className={`text-uppercase text-start ${modeToggler? styles.brightMode: styles.darkMode} ${styles.commonTile}`}
       >
         {title}
@@ -16,7 +21,7 @@ export  const  Commontitle = ({title, icon,modeToggler}) => {
             alt="arrow"
           />
         </span>
-      </h2>
+      </motion.h2>
   )
 }
 export const Experince = ({Width}) => {
