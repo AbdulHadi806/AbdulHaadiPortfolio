@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { sendContactForm } from 'lib/api'
 import { Alertbox1, Alertbox2 } from './alertbox'
 import ClipLoader from 'react-spinners/ClipLoader'
+import { motion, Variants } from 'framer-motion'
+
 ('use client')
 
 const initValues = { name: '', email: '', subject: '', message: '' }
@@ -21,6 +23,22 @@ export default function Contactme({modeToggler}) {
     const [message, setMessage] = useState('')
     const [error, setError] = useState(false)
     const [toggle, setToggle] = useState(true)
+    const rightFormAnimation = {
+        offscreen: { opacity: 0, x: 100 },
+        onscreen: { opacity: 1, x: 0 },
+        transition: {
+            duration: 0.4,
+            delay: 0.1,
+        },
+    }
+    const leftFormAnimation = {
+        offscreen: { opacity: 0, x: -100 },
+        onscreen: { opacity: 1, x: 0 },
+        transition: {
+            duration: 0.4,
+            delay: 0.1,
+        },
+    }
 
     const { values } = state
 
@@ -75,14 +93,16 @@ export default function Contactme({modeToggler}) {
     if (Error) return <div>Failed to load</div>
     if (!data) return <div>Loading...</div>
     return (
-        <div>
+        <motion.div initial={'offscreen'}
+        whileInView={'onscreen'}
+        viewport={{ once: false, amount: 0.3 }}>
             <Commontitle
                 title={data.ContactMe.ContactMeTitle}
                 icon={data.skills.arrowimg}
                 modeToggler={modeToggler}
             />
             <div className="row">
-                <div className="col-lg-6 col-xl-5 text-start">
+                <motion.div variants={rightFormAnimation} className="col-lg-6 col-xl-5 text-start">
                     <div style={{borderRadius: "11px"}} className={`${modeToggler? "" : styles.darkMode} ${styles.RightBox}`}>
                         <h4 style={{whiteSpace: 'pre-line'}}>
                             {data.ContactMe.ContactRightBox.ContactBoxIntro}
@@ -116,8 +136,8 @@ export default function Contactme({modeToggler}) {
                             </Link>
                         </span>
                     </div>
-                </div>
-                <div className="col-lg-6 col-xl-7">
+                </motion.div>
+                <motion.div variants={leftFormAnimation} className="col-lg-6 col-xl-7">
                     <div className={`d-flex justify-content-center ${modeToggler? "" : styles.darkMode}  ${styles.formsMain}`}>
                         <label className={`fw-bold ${modeToggler? "" : styles.darkMode}`} style={{fontSize: "20px"}}>Get In Touch With Me Directly</label>
                         <form
@@ -230,8 +250,8 @@ export default function Contactme({modeToggler}) {
                             </button>
                         </form>
                     </div>
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }

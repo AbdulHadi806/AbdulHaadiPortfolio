@@ -18,6 +18,13 @@ function Portfolio({ modeToggler }) {
             opacity: 1,
         },
     }
+    const popUpAnimation = {
+      offscreen:{ opacity: 0, y:50 },
+      onscreen: { opacity: 1, y:0 },
+      transition:{
+        ease: [0, 0.71, 0.2, 1.01]
+      }
+    }
     const openHander = (items) => {
         setFullImage(items)
         setOpen(false)
@@ -34,6 +41,7 @@ function Portfolio({ modeToggler }) {
             initial={'offscreen'}
             whileInView={'onscreen'}
             viewport={{ once: false, amount: 0.1 }}
+            transition={{ staggerChildren: 0.2 }}
         >
             <Commontitle
                 mainHeadingAnimation={mainHeadingAnimation}
@@ -46,7 +54,7 @@ function Portfolio({ modeToggler }) {
                 <div className={`${styles.row} ${styles.portfolioContent}`}>
                     {data.Portfolio.images.map((items) => {
                         return (
-                            <div key={Math.random()} className={styles.item}>
+                            <motion.div variants={popUpAnimation} key={Math.random()} className={styles.item}>
                                 <div className={styles.well}>
                                     <button
                                         style={{
@@ -72,7 +80,7 @@ function Portfolio({ modeToggler }) {
                                         />
                                     </button>
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })}
                 </div>
