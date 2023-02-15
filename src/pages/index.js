@@ -13,7 +13,8 @@ import ClipLoader from 'react-spinners/ClipLoader'
 import useSWR from 'swr'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-;('use client')
+;import Separation from '@/components/commonTitle'
+('use client')
 
 const inter = Inter({ subsets: ['latin'] })
 const fetcher = (url) => fetch(url).then((res) => res.json())
@@ -111,7 +112,8 @@ export default function Home() {
                             >
                                 <Aboutme modeToggler={modeToggler} />
                             </div>
-                            <div className={styles.separation}></div>
+                            <Separation style={{margin: "93px 0 19px 0"}} stylesDefault={styles.separation}
+                            separationDarkMode={styles.separationDarkMode} modeToggler={modeToggler}/>
                             <div
                                 id="Skills"
                                 className="col-md-12 col-lg-10"
@@ -119,23 +121,23 @@ export default function Home() {
                             >
                                 <Skillsrow modeToggler={modeToggler} />
                             </div>
-                            <div className={styles.separation}></div>
+                            <Separation stylesDefault={styles.separation} separationDarkMode={styles.separationDarkMode} modeToggler={modeToggler}/>
                             <div
                                 id="Services"
                                 className="col-md-12 col-lg-10"
-                                style={{ paddingTop: '50px' }}
                             >
                                 <Services modeToggler={modeToggler} />
                             </div>
-                            <div className={styles.separation}></div>
+                            <Separation stylesDefault={styles.separation} separationDarkMode={styles.separationDarkMode} modeToggler={modeToggler}/>
                             <div id="Portfolio" className="col-md-12 col-lg-10">
                                 <Portfolio modeToggler={modeToggler} />
                             </div>
-                            <div className={styles.separation}></div>
+                            <Separation stylesDefault={styles.separation} separationDarkMode={styles.separationDarkMode} modeToggler={modeToggler}/>
                             <div id="Contact" className="col-md-12 col-lg-10">
                                 <Contactme modeToggler={modeToggler} />
                             </div>
-                            <div className={styles.separation} style={{margin: "93px 0 19px 0"}}></div>
+                            <Separation style={{margin: "93px 0 19px 0"}} stylesDefault={styles.separation}
+                            separationDarkMode={styles.separationDarkMode} modeToggler={modeToggler}/>
                             <div className="col-md-12 col-lg-10">
                                 <p style={modeToggler? {color:"#000"}: {color:"#fff"}}>
                                     © 2023. All rights reserved by Abdul Hadi.

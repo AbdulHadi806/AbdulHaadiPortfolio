@@ -22,40 +22,17 @@
  position:relative;
  display: block;
 }
-.closeButton {
-  position: relative;
-  z-index: 2;
-  transition: .3s all ease-in-out;
-}
-
-.overLay{
-  bottom: 0;
-  left: 0;
-  transition: .4s all ease-in-out;
-  right: 0;
-  overflow: hidden;
-  z-index: 99;
-  height: 0;
-  overflow: hidden;
- -moz-animation-delay: 3.5s;
- -webkit-animation-delay: 3.5s;
- -o-animation-delay: 3.5s;
-  animation-delay: 3.5s;
-}
-.closeButton:hover .overLay{
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
 .animatedOverlayTxt {
   background-color: #2FBF71;
-    width: 177px;
-    margin-top: 14px;
-    height: 47px;
-    display: inline-block;
-    line-height: 41px;
-    color: #fff;
-    border: 1px solid transparent;
-    transition: .2s all ease-in-out;;
+  width: 96px;
+  height: 38px;
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  line-height: 34px;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: .2s all ease-in-out;
 }
 .animatedOverlayTxt:hover {
   background-color: transparent;
@@ -64,6 +41,7 @@
 .fullscreenImg {
   width: 100% !important;
   height: initial !important;
+  object-fit: scale-down;
 }
 .backgroundNone {
   width: 100%;

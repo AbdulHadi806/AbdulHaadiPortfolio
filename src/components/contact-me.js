@@ -92,7 +92,7 @@ export default function Contactme({modeToggler}) {
                         </p>
                         <span className="d-flex h5" style={{whiteSpace: "pre"}}>
                             <FontAwesomeIcon
-                                style={{ color: 'green', paddingRight: '7px' }}
+                                style={{ color: 'green', paddingRight: '7px',fontSize: "19px" }}
                                 icon={faLocationDot}
                             />
                             {data.ContactMe.ContactRightBox.location}
@@ -102,7 +102,7 @@ export default function Contactme({modeToggler}) {
                                 style={{ color: 'green', paddingRight: '7px' }}
                                 icon={faEnvelope}
                             />
-                            <Link
+                            <Link style={{fontSize: "19px"}}
                                 className={`
                                     text-decoration-none 
                                     ${styles.Email} ${modeToggler? "" : styles.darkMode}`
