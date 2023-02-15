@@ -18,6 +18,14 @@ function Portfolio({ modeToggler }) {
             opacity: 1,
         },
     }
+    const itemVariants = {
+        open: {
+          opacity: 1,
+          y: 0,
+          transition: { type: "spring", stiffness: 300, damping: 24 }
+        },
+        closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+      };
     const popUpAnimation = {
       offscreen:{ opacity: 0, y:50 },
       onscreen: { opacity: 1, y:0 },
@@ -40,7 +48,7 @@ function Portfolio({ modeToggler }) {
         <motion.div
             initial={'offscreen'}
             whileInView={'onscreen'}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{ staggerChildren: 0.1 }}
         >
             <Commontitle
@@ -54,9 +62,9 @@ function Portfolio({ modeToggler }) {
                 <div className={`${styles.row} ${styles.portfolioContent}`}>
                     {data.Portfolio.images.map((items) => {
                         return (
-                            <motion.div variants={popUpAnimation} key={Math.random()} className={styles.item}>
+                            <motion.div animate={itemVariants}  key={Math.random()} className={styles.item}>
                                 <div className={styles.well}>
-                                    <button
+                                    <button 
                                         style={{
                                             border: 'transparent',
                                             width: '100%',

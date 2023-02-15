@@ -24,19 +24,19 @@ export default function Contactme({modeToggler}) {
     const [error, setError] = useState(false)
     const [toggle, setToggle] = useState(true)
     const rightFormAnimation = {
-        offscreen: { opacity: 0, x: 100 },
+        offscreen: { opacity: 0, x: -250 },
         onscreen: { opacity: 1, x: 0 },
         transition: {
-            duration: 0.4,
-            delay: 0.1,
+            duration: 2,
+            delay: 0.4,
         },
     }
     const leftFormAnimation = {
-        offscreen: { opacity: 0, x: -100 },
+        offscreen: { opacity: 0, x: 250 },
         onscreen: { opacity: 1, x: 0 },
         transition: {
-            duration: 0.4,
-            delay: 0.1,
+            duration: 2,
+            delay: 0.4,
         },
     }
 
