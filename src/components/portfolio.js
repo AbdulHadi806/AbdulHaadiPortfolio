@@ -29,7 +29,7 @@ function Portfolio({modeToggler}) {
             <div  key={Math.random()} className={styles.item}>
             <div className={styles.well}> 
             <button style={{border:"transparent", width:"100%", background:"transparent"}} onClick={(e)=> {e.preventDefault() ;openHander(items)}}>
-            <Image className={`${modeToggler? "img-thumbnail" : styles.backgroundNone} ${styles.zoom}`} 
+            <Image  className={`${modeToggler? "img-thumbnail" : styles.backgroundNone} ${styles.zoom}`} 
             src={items.src} width={items.width} height={items.height} alt="PortFolio Images" />
             </button>
             </div>
@@ -37,7 +37,7 @@ function Portfolio({modeToggler}) {
           )
         })}
       </div>:<><button className="position-relative" style={{border:"transparent", backgroundColor: "transparent"}} onClick={closeHander}>
-        <Image width={700} height={700}  className={styles.fullscreenImg}  src={fullImage && fullImage.src} alt="portfolio-fullscreen" />
+        <Image  priority={true} width={700} height={700}  className={styles.fullscreenImg}  src={fullImage && fullImage.src} alt="portfolio-fullscreen" />
          <span className={styles.animatedOverlayTxt}>Close</span>
         </button></>}
     </div>

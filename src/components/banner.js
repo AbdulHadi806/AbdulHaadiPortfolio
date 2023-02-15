@@ -76,7 +76,7 @@ function Banner({ modeToggler }) {
             <div className="col-md-6">
                 <div className={`text-center position-relative ${styles.mainImage}`}>
                     <Image
-                        priority
+                        priority={true}
                         src={data.Banner.MyImage}
                         alt="My Avatar"
                         width={500}
@@ -84,7 +84,6 @@ function Banner({ modeToggler }) {
                         className={`img-fluid position-relative ${styles.myMainImage}`}
                         style={{ borderRadius: '40%' }}
                     ></Image>
-                    <TextTransition springConfig={presets.wobbly}></TextTransition>
                     <label
                         className={`text-capitalize d-block ${
                             modeToggler ? '' : styles.darkMode
