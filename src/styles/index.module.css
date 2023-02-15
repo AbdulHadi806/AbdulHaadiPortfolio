@@ -66,6 +66,7 @@
 .modeChangerLight {
     right: 79px;
     top: 7px;
+    z-index: 99;
     font-size: 30px;
     border: 1px solid #000;
     padding: 7px;
@@ -85,6 +86,9 @@
     border-radius: 43px;
     color: #fff;
     background-color: #000;
+}
+.bgLight {
+    z-index: 999;
 }
 @media (min-width: 1800px){
     .container {
