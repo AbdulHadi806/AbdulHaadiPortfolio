@@ -13,14 +13,20 @@
 .skillBox:hover {
     background-color: rgba(0, 255, 28, 0.4);
 }
+.darkMode:hover{
+    background-color: rgb(128 244 155 / 93%);;
+}
 .whatIdoType {
     transition: .3s all ease-in-out;
     color: #fff;
     font-size: 20px;
     font-weight: 600;
+}    
+.darkMode:hover .whatIdoType {
+    color: #fff !important;
 }
 .skillBox:hover .whatIdoType {
-    color: #000 !important;
+    color: #000;
 }
 @media(max-width:767px){
     .skillBox {

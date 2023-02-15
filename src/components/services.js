@@ -17,7 +17,7 @@ function Services({modeToggler}) {
           {data.WhatIDo.map((items) => {
             return (
               <div key={Math.random()} className="col-6 col-sm-4 col-xl-3">
-                <div className={styles.skillBox}>
+                <div className={`${modeToggler? "" : styles.darkMode} ${styles.skillBox}`}>
                   <h4
                     className={styles.whatIdoType}
                   >

@@ -83,28 +83,28 @@ export default function Contactme({modeToggler}) {
             />
             <div className="row">
                 <div className="col-lg-6 col-xl-5 text-start">
-                    <div className={`${modeToggler? "" : styles.darkMode} ${styles.RightBox}`}>
+                    <div style={{borderRadius: "11px"}} className={`${modeToggler? "" : styles.darkMode} ${styles.RightBox}`}>
                         <h4 style={{whiteSpace: 'pre-line'}}>
                             {data.ContactMe.ContactRightBox.ContactBoxIntro}
                         </h4>
-                        <p className={modeToggler? "" : styles.darkMode} style={{ color: '#555555' }}>
+                        <p className={modeToggler? "" : styles.darkMode} style={{ color: '#555555',padding: "10px 0 5px 0" }}>
                             {data.ContactMe.ContactRightBox.ContactBoxDesc}
                         </p>
-                        <span className="d-flex h5" style={{whiteSpace: "pre"}}>
+                        <span className="d-flex" style={{fontSize: "19px" ,whiteSpace: "pre", lineHeight:"26px", fontWeight:400}}>
                             <FontAwesomeIcon
-                                style={{ color: 'green', paddingRight: '7px',fontSize: "19px" }}
+                                style={{ color: 'green', paddingRight: '7px',marginTop: "5px"}}
                                 icon={faLocationDot}
                             />
                             {data.ContactMe.ContactRightBox.location}
                         </span>
-                        <span className="d-flex h5  align-items-center">
+                        <span className="d-flex   align-items-center">
                             <FontAwesomeIcon
-                                style={{ color: 'green', paddingRight: '7px' }}
+                                style={{ color: 'green', paddingRight: '7px',marginTop: "5px", fontSize: "16px" }}
                                 icon={faEnvelope}
                             />
-                            <Link style={{fontSize: "19px"}}
+                            <Link
                                 className={`
-                                    text-decoration-none 
+                                    text-decoration-none
                                     ${styles.Email} ${modeToggler? "" : styles.darkMode}`
                                 }
                                 href={
@@ -118,7 +118,7 @@ export default function Contactme({modeToggler}) {
                     </div>
                 </div>
                 <div className="col-lg-6 col-xl-7">
-                    <div className={`d-flex justify-content-center ${modeToggler? "" : styles.darkMode}  ${styles.forms}`}>
+                    <div className={`d-flex justify-content-center ${modeToggler? "" : styles.darkMode}  ${styles.formsMain}`}>
                         <label className={`fw-bold ${modeToggler? "" : styles.darkMode}`} style={{fontSize: "20px"}}>Get In Touch With Me Directly</label>
                         <form
                             onSubmit={(e) => {

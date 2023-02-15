@@ -91,7 +91,7 @@ function Banner({ modeToggler }) {
                         className={`img-fluid position-relative ${styles.myMainImage}`}
                         style={{ borderRadius: '40%' }}
                     ></Image>
-                    <label data-aos-duration="2000" data-aos="fade-right"
+                    <label 
                         className={`text-capitalize d-block ${
                             modeToggler ? '' : styles.darkMode
                         }`}

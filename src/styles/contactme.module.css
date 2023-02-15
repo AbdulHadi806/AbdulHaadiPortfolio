@@ -5,11 +5,8 @@
 
 .Email {
     color: #000;
-    font-size: 22px;
-}
-
-.Email:hover {
-    color: #000;
+    font-size: 19px;
+    font-weight: 400;
 }
 
 .linkBut {
@@ -46,11 +43,17 @@
     background-color: transparent;
     color: #fff;
 }
+.formsMain {
+    flex-direction: column;
+    background-color: #f7f7ff;
+    padding-top: 51px;
+    height: auto;
+    border-radius: 11px;
+}
 .forms {
     height: auto;
     flex-direction: column;
-    background-color: #f7f7ff;
-    padding: 29px 36px 15px 36px;
+    padding: 39px 36px 25px 36px;
 }
 @media(max-width: 767px) {
     .Email {

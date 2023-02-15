@@ -24,12 +24,13 @@
 }
 .animatedOverlayTxt {
   background-color: #2FBF71;
-  width: 96px;
-  height: 38px;
+  width: 66px;
+  height: 33px;
   position: absolute;
   display: inline-block;
   right: 0;
-  line-height: 34px;
+  font-size: 14px;
+  line-height: 31px;
   color: #fff;
   border: 1px solid transparent;
   transition: .2s all ease-in-out;
