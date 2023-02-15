@@ -68,7 +68,7 @@ function Portfolio({ modeToggler }) {
                                             openHander(items)
                                         }}
                                     >
-                                        <Image
+                                        <Image priority={true}
                                             className={`${
                                                 modeToggler
                                                     ? 'img-thumbnail'
@@ -95,7 +95,7 @@ function Portfolio({ modeToggler }) {
                         }}
                         onClick={closeHander}
                     >
-                        <Image
+                        <Image priority={true}
                             width={700}
                             height={700}
                             className={styles.fullscreenImg}
