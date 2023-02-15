@@ -30,7 +30,7 @@ function Services({ modeToggler }) {
         <motion.div
             initial={'offscreen'}
             whileInView={'onscreen'}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ staggerChildren: 0.2 }}
         >
             <Commontitle

@@ -25,19 +25,18 @@ export default function Contactme({modeToggler}) {
     const [toggle, setToggle] = useState(true)
     const rightFormAnimation = {
         offscreen: { opacity: 0, x: -250 },
-        onscreen: { opacity: 1, x: 0 },
-        transition: {
-            duration: 2,
-            delay: 0.4,
-        },
+        onscreen: { opacity: 1, x: 0,transition: { type: 'spring', bounce: 0.4, duration: 0.8,delay:0.9 }, },
+     
     }
     const leftFormAnimation = {
         offscreen: { opacity: 0, x: 250 },
-        onscreen: { opacity: 1, x: 0 },
-        transition: {
-            duration: 2,
-            delay: 0.4,
-        },
+        onscreen: { opacity: 1, x: 0,transition: { type: 'spring', bounce: 0.4, duration: 0.4,delay:0.3 }, },
+       
+    }
+    const contactAnimation = {
+        offscreen: { opacity: 0 },
+        onscreen: { opacity: 1,transition: { type: 'ease', bounce: 0.4, duration: 0.4,delay:0.3 }, },
+       
     }
 
     const { values } = state
@@ -102,7 +101,7 @@ export default function Contactme({modeToggler}) {
                 modeToggler={modeToggler}
             />
             <div className="row">
-                <motion.div variants={rightFormAnimation} className="col-lg-6 col-xl-5 text-start">
+                <motion.div contactAnimation={contactAnimation} variants={rightFormAnimation} className="col-lg-6 col-xl-5 text-start">
                     <div style={{borderRadius: "11px"}} className={`${modeToggler? "" : styles.darkMode} ${styles.RightBox}`}>
                         <h4 style={{whiteSpace: 'pre-line'}}>
                             {data.ContactMe.ContactRightBox.ContactBoxIntro}
@@ -137,7 +136,7 @@ export default function Contactme({modeToggler}) {
                         </span>
                     </div>
                 </motion.div>
-                <motion.div variants={leftFormAnimation} className="col-lg-6 col-xl-7">
+                <motion.div contactAnimation={contactAnimation} variants={leftFormAnimation} className="col-lg-6 col-xl-7">
                     <div className={`d-flex justify-content-center ${modeToggler? "" : styles.darkMode}  ${styles.formsMain}`}>
                         <label className={`fw-bold ${modeToggler? "" : styles.darkMode}`} style={{fontSize: "20px"}}>Get In Touch With Me Directly</label>
                         <form
@@ -166,8 +165,8 @@ export default function Contactme({modeToggler}) {
                                 ) : (
                                     ''
                                 )}
-                                <div className="col-lg-6">
-                                    <div className="form-outline mb-4">
+                                <div className="col-lg-6" >
+                                    <div className="form-outline mb-2">
                                         <input
                                             type="text"
                                             id="form4Example1"
@@ -181,8 +180,8 @@ export default function Contactme({modeToggler}) {
                                     </div>
                                 </div>
 
-                                <div className="col-lg-6">
-                                    <div className="form-outline mb-4">
+                                <div className={`col-lg-6 ${styles.paddAjust} `} >
+                                    <div className="form-outline mb-2">
                                         <input
                                             type="email"
                                             id="form4Example2"
@@ -198,7 +197,7 @@ export default function Contactme({modeToggler}) {
                                 </div>
                             </div>
                             <div className="col-lg-12">
-                                <div className="form-outline mb-4">
+                                <div className="form-outline mb-2">
                                     <input
                                         type="subject"
                                         id="form4Example2"

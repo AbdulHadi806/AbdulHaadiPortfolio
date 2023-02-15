@@ -83,7 +83,7 @@ function Banner({ modeToggler }) {
         <div className={`row text-start ${styles.reverseDirectionMobile}`}>
             <motion.div initial={'offscreen'}
                     whileInView={'onscreen'}
-                    viewport={{ once: false, amount: 0.1 }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ staggerChildren: 0.5 }} className={`col-md-6  ${styles.leftSide}`}>
                 <motion.h1
                     className={`${modeToggler ? '' : styles.darkMode} ${

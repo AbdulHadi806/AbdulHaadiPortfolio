@@ -55,6 +55,11 @@
     flex-direction: column;
     padding: 39px 36px 25px 36px;
 }
+@media(min-width:992px) {
+    .paddAjust {
+        padding-left: initial;
+    }
+}
 @media(max-width: 767px) {
     .Email {
         font-size: 17px;

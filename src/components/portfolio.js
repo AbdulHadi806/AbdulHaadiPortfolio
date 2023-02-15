@@ -26,13 +26,6 @@ function Portfolio({ modeToggler }) {
         },
         closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
       };
-    const popUpAnimation = {
-      offscreen:{ opacity: 0, y:50 },
-      onscreen: { opacity: 1, y:0 },
-      transition:{
-        ease: [0, 0.71, 0.2, 1.01]
-      }
-    }
     const openHander = (items) => {
         setFullImage(items)
         setOpen(false)
@@ -48,7 +41,7 @@ function Portfolio({ modeToggler }) {
         <motion.div
             initial={'offscreen'}
             whileInView={'onscreen'}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ staggerChildren: 0.1 }}
         >
             <Commontitle
