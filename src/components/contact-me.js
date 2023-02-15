@@ -110,7 +110,7 @@ export default function Contactme({modeToggler}) {
                         <p className={modeToggler? "" : styles.darkMode} style={{ color: '#555555',padding: "10px 0 5px 0" }}>
                             {data.ContactMe.ContactRightBox.ContactBoxDesc}
                         </p>
-                        <span className="d-flex" style={{fontSize: "19px" ,whiteSpace: "pre", lineHeight:"26px", fontWeight:400}}>
+                        <span className="d-flex" style={{fontSize: "16px" ,whiteSpace: "pre", lineHeight:"26px", fontWeight:400}}>
                             <FontAwesomeIcon
                                 style={{ color: 'green', paddingRight: '7px',marginTop: "5px"}}
                                 icon={faLocationDot}
@@ -119,7 +119,7 @@ export default function Contactme({modeToggler}) {
                         </span>
                         <span className="d-flex   align-items-center">
                             <FontAwesomeIcon
-                                style={{ color: 'green', paddingRight: '7px',marginTop: "5px", fontSize: "16px" }}
+                                style={{ color: 'green', paddingRight: '7px',marginTop: "5px", fontSize: "14px" }}
                                 icon={faEnvelope}
                             />
                             <Link

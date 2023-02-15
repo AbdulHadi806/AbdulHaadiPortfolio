@@ -31,6 +31,7 @@
   color: #525259;
   text-decoration: none;
   line-height: 35px;
+  font-weight: 400;
   width: 306px;
 
 }
@@ -94,6 +95,9 @@
 }
 .activeLight {
     color: #000;
+}
+.navigationList:hover .activeLight,.activeDark {
+    color: grey !important;
 }
 @media screen and (max-height: 735px) {
     .container {
