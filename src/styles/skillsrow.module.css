@@ -4,3 +4,9 @@
 .darkMode {
     color: #fff !important;
 }
+.activeLight {
+    color: #000;
+}
+.activeDark {
+    color: #c4c2c2;
+}

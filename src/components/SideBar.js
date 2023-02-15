@@ -105,7 +105,7 @@ function SideBar({ modeToggler }) {
             navigation.map((item) => {
               return (
                 <li key={Math.random()} className={`position-relative ${styles.navigationList}`}>
-                  <Link activeStyle={modeToggler? {color:"#000"}: {color:"#c4c2c2"}}
+                  <Link activeClass={modeToggler? styles.activeLight: styles.activeDark}
                     spy={true}
                     smooth={true}
                     offset={-70}

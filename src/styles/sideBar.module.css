@@ -89,6 +89,12 @@
 .socialMediaRow ul {
     gap: 20px;
 }
+.activeDark {
+    color: grey;
+}
+.activeLight {
+    color: #000;
+}
 @media screen and (max-height: 735px) {
     .container {
         justify-content: initial !important;
