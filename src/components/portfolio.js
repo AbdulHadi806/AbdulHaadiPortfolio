@@ -37,7 +37,7 @@ function Portfolio({modeToggler}) {
           )
         })}
       </div>:<><button className={styles.closeButton} style={{border:"transparent"}} onClick={closeHander}>
-        <img   className={styles.fullscreenImg} style={{width: "100%"}} src={fullImage && fullImage.src} alt="portfolio-fullscreen" />
+        <Image width={100} height={100}  className={styles.fullscreenImg}  src={fullImage && fullImage.src} alt="portfolio-fullscreen" />
         <div  className={`position-absolute mx-auto my-0 ${styles.overLay}`}><span className={styles.animatedOverlayTxt}>Click to Close</span></div>
         </button></>}
     </div>

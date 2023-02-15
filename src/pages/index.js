@@ -56,7 +56,7 @@ export default function Home() {
                     modeToggler
                         ? styles.modeChangerLight
                         : styles.modeChangerDark
-                }`}
+                } ${styles.bounce}`}
             />
             <div
                 className={`${
