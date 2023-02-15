@@ -135,10 +135,10 @@ export default function Home() {
                             <div id="Contact" className="col-md-12 col-lg-10">
                                 <Contactme modeToggler={modeToggler} />
                             </div>
-                            <Separation style={{margin: "93px 0 19px 0"}} stylesDefault={styles.separation}
+                            <Separation style={{margin: "93px 0 19px 0 !important"}} stylesDefault={styles.separation}
                             separationDarkMode={styles.separationDarkMode} modeToggler={modeToggler}/>
                             <div className="col-md-12 col-lg-10">
-                                <p style={modeToggler? {color:"#000"}: {color:"#fff"}}>
+                                <p style={modeToggler? {color:"#000",fontSize: "12px"}: {color:"#fff",fontSize: "12px"}}>
                                     © 2023. All rights reserved by Abdul Hadi.
                                 </p>
                             </div>
