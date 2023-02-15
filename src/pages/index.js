@@ -14,6 +14,8 @@ import useSWR from 'swr'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 ;import Separation from '@/components/commonTitle'
+import { motion, Variants } from 'framer-motion'
+
 ('use client')
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,7 +26,14 @@ export default function Home() {
     const [modeToggler, setModeToggler] = useState(true)
     const [clickCss, setClickCss] = useState(false)
     const { data, error } = useSWR('/api/portfolio', fetcher)
-
+    const handlerAnimation = {
+        open: {
+          opacity: 1,
+          y: 0,
+          transition: { type: "spring", stiffness: 300, damping: 24 }
+        },
+        closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+      };
     const setToggelerChangeHandler = () => {
         setToggeler((prevCheck) => !prevCheck)
     }
@@ -90,13 +99,14 @@ export default function Home() {
                 </button>
             </div>
             <div className="row justify-content-center">
-                <div
+                <motion.div initial={false}
+                     animate={toggler ? "open" : "closed"}
                     className={`g-0 col-8 col-sm-5 col-md-4 col-lg-3  col-xl-2 col-xxl-2 position-fixed ${
                         modeToggler ? '' : styles.sideBarBgChanger
                     } ${toggler ? styles.sideBarOuter : styles.responsiveNav}`}
                 >
                     <SideBar modeToggler={modeToggler} />
-                </div>
+                </motion.div>
                 <div
                     className={`col-sm-12 col-xl-10 text-center container offset-xl-3  ${styles.helloSectionOuter}`}
                 >

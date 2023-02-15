@@ -27,13 +27,13 @@ const Skillsrow = ({modeToggler}) => {
     const skillsAnimation = {
         offscreen: { opacity: 0},
         onscreen: { opacity:1},
-        transition: { delay: 0.3,duration:0.6}
+        transition: { delay: 0.2,duration:0.4}
     }
     return (
         <motion.div initial={'offscreen'}
                     whileInView={'onscreen'}
-                    viewport={{ once: false, amount: 0.3 }}
-                    transition={{ staggerChildren: 0.5 }} className={`text-start ${styles.skillsRow}`}>
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{ staggerChildren: 0.4 }} className={`text-start ${styles.skillsRow}`}>
             <Commontitle mainHeadingAnimation={mainHeadingAnimation}
                 title={data.skills.heading + '.'}
                 icon={data.skills.arrowimg}

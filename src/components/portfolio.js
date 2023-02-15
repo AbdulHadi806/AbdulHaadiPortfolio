@@ -40,8 +40,8 @@ function Portfolio({ modeToggler }) {
         <motion.div
             initial={'offscreen'}
             whileInView={'onscreen'}
-            viewport={{ once: false, amount: 0.1 }}
-            transition={{ staggerChildren: 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ staggerChildren: 0.1 }}
         >
             <Commontitle
                 mainHeadingAnimation={mainHeadingAnimation}
