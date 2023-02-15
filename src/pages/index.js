@@ -50,15 +50,14 @@ export default function Home() {
     return (
         <div className={modeToggler ? '' : styles.darkMode}>
             {' '}
-            <FontAwesomeIcon
-                onClick={modeChangerHander}
+                <div onClick={modeChangerHander} style={{cursor: "pointer"}}><FontAwesomeIcon
                 icon={faMoon}
                 className={`position-fixed ${
                     modeToggler
                         ? styles.modeChangerLight
                         : styles.modeChangerDark
                 } ${styles.bounce}`}
-            />
+            /></div>
             <div
                 className={`${
                     toggler == false && modeToggler
