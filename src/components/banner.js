@@ -4,15 +4,71 @@ import useSWR from 'swr'
 import React, { useEffect, useState } from 'react'
 import styles from '../styles/banner.module.css'
 import TextTransition, { presets } from 'react-text-transition'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { motion, Variants } from 'framer-motion'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 function Banner({ modeToggler }) {
     const { data, error } = useSWR('/api/portfolio', fetcher)
     const [index, setIndex] = useState(0)
-    const [reloader, setReloader] = useState(1)
+    const imageAnimate = {
+        offscreen: { x: -100, opacity: 0 },
+        onscreen: {
+            x: 0,
+            opacity: 1,
+            rotate: [0, 10, 0],
+            transition: { type: 'spring', bounce: 0.4, duration: 1 },
+        },
+    }
+    const labelAnimation = {
+        offscreen: { x: 100, opacity: 0 },
+        onscreen: {
+            x: 0,
+            opacity: 1,
+            rotate: [0, 10, 0],
+            transition: { type: 'spring', bounce: 0.4, duration: 1 },
+        },
+    }
+    const h1Animation = {
+        offscreen: { y: -100, opacity: 0 },
+        onscreen: {
+            y: 0,
+            opacity: 1,
+            transition: { type: 'spring', bounce: 0.4, duration: 1 },
+        },
+    }
+    const h1SpanAnimation = {
+        offscreen: { x: -100, opacity: 0 },
+        onscreen: {
+            x: 0,
+            opacity: 1,
+            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.5 },
+        },
+    }
+    const h3Animation = {
+        offscreen: { x: -100, opacity: 0 },
+        onscreen: {
+            x: 0,
+            opacity: 1,
+            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.7 },
+        },
+    }
+    const pAnimation = {
+        offscreen: { x: -100, opacity: 0 },
+        onscreen: {
+            x: 0,
+            opacity: 1,
+            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.9 },
+        },
+    }
+    const buttonAnimation = {
+        offscreen: { y: 100, opacity: 0 },
+        onscreen: {
+            y: 0,
+            opacity: 1,
+            transition: { type: 'spring', bounce: 0.4, duration: 1,delay:0.2 },
+        },
+    }
     useEffect(() => {
         const intervalId = setInterval(
             () => setIndex((index) => index + 1),
@@ -20,29 +76,33 @@ function Banner({ modeToggler }) {
         )
         return () => clearTimeout(intervalId)
     }, [])
-    useEffect(() => {
-        AOS.init({duration : 1500,disable: window.innerWidth < 1024});
-      }, [reloader])
+
     if (error) return <div>Failed to load</div>
     if (!data) return <div>Loading...</div>
     return (
-        <div  className={`row text-start ${styles.reverseDirectionMobile}`}>
-            <div data-aos="fade-up" className={`col-md-6  ${styles.leftSide}`}>
-                <h1
+        <div className={`row text-start ${styles.reverseDirectionMobile}`}>
+            <motion.div initial={'offscreen'}
+                    whileInView={'onscreen'}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{ staggerChildren: 0.5 }} className={`col-md-6  ${styles.leftSide}`}>
+                <motion.h1
                     className={`${modeToggler ? '' : styles.darkMode} ${
                         styles.helloIAm
                     }`}
+                    variants={h1Animation}
                 >
                     {data.Banner.titleMain}{' '}
-                    <span
+                    <motion.span
                         className={`${modeToggler ? '' : styles.darkMode} ${
                             styles.myName
                         }`}
+                        variants={h1SpanAnimation}
                     >
                         {data.Banner.titleSecondary}
-                    </span>
-                </h1>
-                <h3
+                    </motion.span>
+                </motion.h1>
+                <motion.h3
+                variants={h3Animation}
                     className={`d-flex ${modeToggler ? '' : styles.darkMode}`}
                     style={{ gap: '12px', flexWrap: 'wrap' }}
                 >
@@ -56,20 +116,21 @@ function Banner({ modeToggler }) {
                             }
                         </TextTransition>
                     </span>
-                </h3>
-                <p
+                </motion.h3>
+                <motion.p 
+                variants={pAnimation}
                     className={`${modeToggler ? '' : styles.darkMode} ${
                         styles.aboutMe
                     }`}
                 >
                     {data.Banner.MyDescription}
-                </p>
-                <div
+                </motion.p>
+                <motion.div variants={buttonAnimation}
                     className={` ${
                         modeToggler ? styles.goPortfolio : styles.darkModeBtn
                     } `}
                 >
-                    <Link 
+                    <Link
                         className={`text-decoration-none ${
                             modeToggler ? '' : styles.darkModeBtn
                         } ${styles.linkBut}`}
@@ -78,28 +139,43 @@ function Banner({ modeToggler }) {
                     >
                         {data.Banner.ButtonPortFolio}
                     </Link>
-                </div>
-            </div>
-            <div data-aos="fade-down" className="col-md-6">
-                <div className={`text-center position-relative ${styles.mainImage}`}>
-                    <Image
-                        priority={true}
-                        src={data.Banner.MyImage}
-                        alt="My Avatar"
-                        width={500}
-                        height={500}
-                        className={`img-fluid position-relative ${styles.myMainImage}`}
-                        style={{ borderRadius: '40%' }}
-                    ></Image>
-                    <label 
+                </motion.div>
+            </motion.div>
+            <div className="col-md-6">
+                <motion.div
+                    initial={'offscreen'}
+                    whileInView={'onscreen'}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{ staggerChildren: 0.5 }}
+                    className={`text-center position-relative ${styles.mainImage}`}
+                >
+                    <motion.div
+                        variants={imageAnimate}
+                    >
+                        <Image
+                            priority={true}
+                            src={data.Banner.MyImage}
+                            alt="My Avatar"
+                            width={500}
+                            height={500}
+                            className={`img-fluid position-relative ${styles.myMainImage}`}
+                            style={{ borderRadius: '40%' }}
+                        ></Image>
+                    </motion.div>
+                    <motion.label
                         className={`text-capitalize d-block ${
                             modeToggler ? '' : styles.darkMode
                         }`}
-                        style={{ fontWeight: 600, fontSize: '19px', marginTop: "3px" }}
+                        style={{
+                            fontWeight: 600,
+                            fontSize: '19px',
+                            marginTop: '3px',
+                        }}
+                        variants={labelAnimation}
                     >
                         My Avatar
-                    </label>
-                </div>
+                    </motion.label>
+                </motion.div>
             </div>
         </div>
     )
