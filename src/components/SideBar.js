@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from '../styles/sideBar.module.css'
 import Image from 'next/image'
 import {
@@ -16,10 +16,15 @@ import {
   faAtom,
 } from '@fortawesome/free-solid-svg-icons'
 import { Link, animateScroll as scroll } from "react-scroll";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function SideBar({ modeToggler }) {
+  useEffect(() => {
+    AOS.init({duration : 1500});
+  }, [])
   const navigation = [
     {
       text: 'Home',
@@ -99,7 +104,7 @@ function SideBar({ modeToggler }) {
           </h2>
         </div>
       </div>
-      <nav style={{ width: '100%' }}>
+      <nav data-aos="fade-in" style={{ width: '100%' }}>
         <ul className="px-0">
           {navigation &&
             navigation.map((item) => {

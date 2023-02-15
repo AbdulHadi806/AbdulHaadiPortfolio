@@ -1,8 +1,8 @@
 {
     "AboutMe": {
         "titleMain": "ABOUT ME.",
-        "titleSecondary": "I'm a experienced Front-End Developer.",
-        "description": "I'm a experienced Front-End Developer. I'm from Pakistan. I Freelance on Upwork and Fiverr. I code and create web elements for amazing people around the world. I like to work with new people. New people new Experiences.",
+        "titleSecondary": "I'm an experienced Front-End Developer.",
+        "description": "I'm an experienced Front-End Developer. I'm from Pakistan. I Freelance on Upwork and Fiverr. I code and create web elements for amazing people around the world. I like to work with new people. New people new Experiences.",
         "contactBtn": "Contact Me",
         "portfolioBtn": "Portfolio",
         "arrowimg": "/images/Arrow-aboutUS.png",
@@ -20,7 +20,7 @@
     "skills": {
         "heading": "My SKILLS",
         "arrowimg": "/images/Arrow-aboutUS.png",
-        "description": "I am a Experince Front-End Developer. I create Pixel Perfect, 100% Responsive sites for different type of clients by using number of different Technologies.",
+        "description": "I love converting Designs to HTML/CSS, React.js, etc. I create and develop fully responsive and Functional websites by using latest technologies.",
         "expertise": [
             {
                 "skill": "HTML/CSS",
@@ -41,6 +41,11 @@
             {
                 "skill": "Graphic Desiging with Photoshop",
                 "experince": "67%"
+            }
+            ,
+            {
+                "skill": "React-Redux",
+                "experince": "86%"
             }
         ]
     },
