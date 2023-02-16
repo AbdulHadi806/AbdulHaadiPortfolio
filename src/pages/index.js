@@ -21,8 +21,8 @@ const inter = Inter({ subsets: ['latin'] })
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Home() {
-    const[toggler,setToggeler]=useState(!1),[modeToggler,setModeToggler]=useState(!0),[clickCss,setClickCss]=useState(!1),{data:e,error:g}=useSWR("/api/portfolio",fetcher),setToggelerChangeHandler=()=>{setToggeler(e=>!e)},modeChangerHander=()=>{setModeToggler(!modeToggler)},clickCssHandler=()=>{setClickCss(!clickCss)};
-
+    const[toggler,setToggeler]=useState(!1),[modeToggler,setModeToggler]=useState(!0),[clickCss,setClickCss]=useState(!1),setToggelerChangeHandler=()=>{setToggeler(e=>!e)},modeChangerHander=()=>{setModeToggler(!modeToggler)},clickCssHandler=()=>{setClickCss(!clickCss)};
+    const { data, error } = useSWR('/api/portfolio', fetcher)
     if (error) return <div>Failed to load</div>
     if (!data)
         return (
