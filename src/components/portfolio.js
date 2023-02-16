@@ -9,31 +9,7 @@ import { motion } from 'framer-motion'
 ;('use client')
 const fetcher = (url) => fetch(url).then((res) => res.json())
 function Portfolio({ modeToggler }) {
-    const [isOpen, setOpen] = useState(true)
-    const [fullImage, setFullImage] = useState()
-    const mainHeadingAnimation = {
-        offscreen: { opacity: 0, x: -100 },
-        onscreen: {
-            x: 0,
-            opacity: 1,
-        },
-    }
-    const itemVariants = {
-        open: {
-          opacity: 1,
-          y: 0,
-          transition: { type: "spring", stiffness: 300, damping: 24 }
-        },
-        closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
-      };
-    const openHander = (items) => {
-        setFullImage(items)
-        setOpen(false)
-    }
-    const closeHander = () => {
-        setFullImage()
-        setOpen(true)
-    }
+    const[isOpen,setOpen]=useState(!0),[fullImage,setFullImage]=useState(),mainHeadingAnimation={offscreen:{opacity:0,x:-100},onscreen:{x:0,opacity:1}},itemVariants={open:{opacity:1,y:0,transition:{type:"spring",stiffness:300,damping:24}},closed:{opacity:0,y:20,transition:{duration:.2}}},openHander=e=>{setFullImage(e),setOpen(!1)},closeHander=()=>{setFullImage(),setOpen(!0)};
     const { data, error } = useSWR('/api/portfolio', fetcher)
     if (error) return <div>Failed to load</div>
     if (!data) return <div>Loading...</div>

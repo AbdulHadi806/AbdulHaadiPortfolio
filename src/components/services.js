@@ -7,22 +7,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 
 function Services({ modeToggler }) {
     const { data, error } = useSWR('/api/portfolio', fetcher)
-    const popUpAnimation = {
-        offscreen: { opacity: 0, scale: 1 },
-        onscreen: { opacity: 1, scale: 1 },
-        transition: {
-            duration: 0.4,
-            delay: 0.1,
-            ease: [0, 0.71, 0.2, 1.01],
-        },
-    }
-    const mainHeadingAnimation = {
-        offscreen: { opacity: 0, x: -100 },
-        onscreen: {
-            x: 0,
-            opacity: 1,
-        },
-    }
+    const popUpAnimation={offscreen:{opacity:0,scale:1},onscreen:{opacity:1,scale:1},transition:{duration:.4,delay:.1,ease:[0,.71,.2,1.01]}},mainHeadingAnimation={offscreen:{opacity:0,x:-100},onscreen:{x:0,opacity:1}};
     if (error) return <div>Failed to load</div>
     if (!data) return <div>Loading...</div>
     return (

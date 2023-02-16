@@ -16,25 +16,7 @@ const initState = { values: initValues }
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Contactme({modeToggler}) {
-    const [state, setState] = useState(initState)
-    const [success, setSuccess] = useState(false)
-    const [isloading, setIsLoading] = useState(false)
-    const [message, setMessage] = useState('')
-    const [error, setError] = useState(false)
-    const [toggle, setToggle] = useState(true)
-    const rightFormAnimation = {
-        offscreen: { opacity: 0, x: -250 },
-        onscreen: { opacity: 1, x: 0,transition: { type: 'spring', bounce: 0.4, duration: 0.8,delay:0.9 }, },
-    }
-    const leftFormAnimation = {
-        offscreen: { opacity: 0, x: 250 },
-        onscreen: { opacity: 1, x: 0,transition: { type: 'spring', bounce: 0.4, duration: 0.4,delay:0.3 }, },
-    }
-    const contactAnimation = {
-        offscreen: { opacity: 0 },
-        onscreen: { opacity: 1,transition: { type: 'ease', bounce: 0.4, duration: 0.4,delay:0.3 }, },
-       
-    }
+    const[state,setState]=useState(initState),[success,setSuccess]=useState(!1),[isloading,setIsLoading]=useState(!1),[message,setMessage]=useState(""),[error,setError]=useState(!1),[toggle,setToggle]=useState(!0),rightFormAnimation={offscreen:{opacity:0,x:-250},onscreen:{opacity:1,x:0,transition:{type:"spring",bounce:.4,duration:.8,delay:.9}}},leftFormAnimation={offscreen:{opacity:0,x:250},onscreen:{opacity:1,x:0,transition:{type:"spring",bounce:.4,duration:.4,delay:.3}}},contactAnimation={offscreen:{opacity:0},onscreen:{opacity:1,transition:{type:"ease",bounce:.4,duration:.4,delay:.3}}};
     const { values } = state
 
     const closeHandler = ({modeToggler}) => {

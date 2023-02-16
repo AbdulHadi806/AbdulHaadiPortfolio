@@ -10,33 +10,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 
 function Banner({ modeToggler }) {
     const { data, error } = useSWR('/api/portfolio', fetcher)
-    const [index, setIndex] = useState(0)
-    const imageAnimate = {
-        offscreen: { x: -100, opacity: 0 },
-        onscreen: {
-            x: 0,
-            opacity: 1,
-            rotate: [0, 10, 0],
-            transition: { type: 'spring', bounce: 0.4, duration: 1 },
-        },
-    }
-    const labelAnimation = {
-        offscreen: { x: 100, opacity: 0 },
-        onscreen: {
-            x: 0,
-            opacity: 1,
-            rotate: [0, 10, 0],
-            transition: { type: 'spring', bounce: 0.4, duration: 1 },
-        },
-    }
-    const h1Animation = {
-        offscreen: { y: -100, opacity: 0 },
-        onscreen: {
-            y: 0,
-            opacity: 1,
-            transition: { type: 'spring', bounce: 0.4, duration: 1 },
-        },
-    }
+    const[index,setIndex]=useState(0),imageAnimate={offscreen:{x:-100,opacity:0},onscreen:{x:0,opacity:1,rotate:[0,10,0],transition:{type:"spring",bounce:.4,duration:1}}},labelAnimation={offscreen:{x:100,opacity:0},onscreen:{x:0,opacity:1,rotate:[0,10,0],transition:{type:"spring",bounce:.4,duration:1}}},h1Animation={offscreen:{y:-100,opacity:0},onscreen:{y:0,opacity:1,transition:{type:"spring",bounce:.4,duration:1}}};
     const h1SpanAnimation = {
         offscreen: { x: -100, opacity: 0 },
         onscreen: {
