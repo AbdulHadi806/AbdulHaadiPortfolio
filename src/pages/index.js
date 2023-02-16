@@ -14,7 +14,6 @@ import useSWR from 'swr'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Separation from '@/components/commonTitle'
-import { motion, Variants } from 'framer-motion'
 ('use client')
 
 const inter = Inter({ subsets: ['latin'] })
