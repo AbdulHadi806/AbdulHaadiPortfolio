@@ -30,39 +30,7 @@ const Skillsrow = ({modeToggler}) => {
         transition: { delay: 0.2,duration:0.4}
     }
     return (
-        <motion.div initial={'offscreen'}
-                    whileInView={'onscreen'}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ staggerChildren: 0.3 }} className={`text-start ${styles.skillsRow}`}>
-            <Commontitle mainHeadingAnimation={mainHeadingAnimation}
-                title={data.skills.heading + '.'}
-                icon={data.skills.arrowimg}
-                modeToggler={modeToggler}
-            />
-            <motion.p transition={{
-              delay: 0.5,}} variants={pAnimation} className={`${modeToggler? "" : styles.darkMode}`} style={{ color: '#555555' }}>
-                {data.skills.description}
-            </motion.p>
-            <motion.div variants={skillsAnimation} className={styles.skillsInner}>
-                {data.skills.expertise.map((item) => {
-                    return (
-                        <div style={{ paddingTop: '15px' }} key={Math.random()}>
-                            <h4 className={modeToggler? "" : styles.darkMode}
-                                style={{
-                                    fontSize: '17px',
-                                    color: '#0b0b13',
-                                    fontWeight: 600,
-                                    letterSpacing: "1px"
-                                }}
-                            >
-                                {item.skill}
-                            </h4>
-                            <Experince Width = {item.experince} />
-                        </div>
-                    )
-                })}
-            </motion.div>
-        </motion.div>
+        <motion.div initial={'offscreen'} whileInView={'onscreen'} viewport={{ once: true, amount: 0.3 }} transition={{ staggerChildren: 0.3 }} className={`text-start ${styles.skillsRow}`}> <Commontitle mainHeadingAnimation={mainHeadingAnimation} title={data.skills.heading + '.'} icon={data.skills.arrowimg} modeToggler={modeToggler} /> <motion.p transition={{ delay: 0.5,}} variants={pAnimation} className={`${modeToggler? "" : styles.darkMode}`} style={{ color: '#555555' }}> {data.skills.description} </motion.p> <motion.div variants={skillsAnimation} className={styles.skillsInner}> {data.skills.expertise.map((item) => { return ( <div style={{ paddingTop: '15px' }} key={Math.random()}> <h4 className={modeToggler? "" : styles.darkMode} style={{ fontSize: '17px', color: '#0b0b13', fontWeight: 600, letterSpacing: "1px" }} > {item.skill} </h4> <Experince Width = {item.experince} /> </div> ) })} </motion.div> </motion.div>
     )
 }
 

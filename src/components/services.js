@@ -3,7 +3,6 @@ import useSWR from 'swr'
 import styles from '../styles/services.module.css'
 import { Commontitle } from './commonTitle'
 import { motion } from 'framer-motion'
-
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 function Services({ modeToggler }) {
@@ -27,43 +26,7 @@ function Services({ modeToggler }) {
     if (error) return <div>Failed to load</div>
     if (!data) return <div>Loading...</div>
     return (
-        <motion.div
-            initial={'offscreen'}
-            whileInView={'onscreen'}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ staggerChildren: 0.2 }}
-        >
-            <Commontitle
-                mainHeadingAnimation={mainHeadingAnimation}
-                title={data.WhatIDoTitle}
-                modeToggler={modeToggler}
-                className="text-start"
-                icon={data.skills.arrowimg}
-            />
-            <div className="whatIDoInner">
-                <div className="row">
-                    {data.WhatIDo.map((items) => {
-                        return (
-                            <motion.div
-                                variants={popUpAnimation}
-                                key={Math.random()}
-                                className="col-6 col-sm-4 col-xl-3"
-                            >
-                                <div
-                                    className={`${
-                                        modeToggler ? '' : styles.darkMode
-                                    } ${styles.skillBox}`}
-                                >
-                                    <h4 className={styles.whatIdoType}>
-                                        {items}
-                                    </h4>
-                                </div>
-                            </motion.div>
-                        )
-                    })}
-                </div>
-            </div>
-        </motion.div>
+        <motion.div initial={'offscreen'} whileInView={'onscreen'} viewport={{ once: true, amount: 0.3 }} transition={{ staggerChildren: 0.2 }} > <Commontitle mainHeadingAnimation={mainHeadingAnimation} title={data.WhatIDoTitle} modeToggler={modeToggler} className="text-start" icon={data.skills.arrowimg} /> <div className="whatIDoInner"> <div className="row"> {data.WhatIDo.map((items) => { return ( <motion.div variants={popUpAnimation} key={Math.random()} className="col-6 col-sm-4 col-xl-3" > <div className={`${ modeToggler ? '' : styles.darkMode } ${styles.skillBox}`} > <h4 className={styles.whatIdoType}> {items} </h4> </div> </motion.div> ) })} </div> </div> </motion.div>
     )
 }
 

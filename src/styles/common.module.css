@@ -1,18 +1,1 @@
-.commonTile {
-    padding-bottom: 5px;
-          letter-spacing: 4px;
-          font-size: 46px;
-          font-weight: 600;
-}
-.brightMode {
-    color: #0b0b13;
-}
-.darkMode {
-    color: #fff;
-}
-@media(max-width:767px){
-    .commonTile {
-        letter-spacing: 4px !important;
-    font-size: 30px !important;
-    }
-}
+.commonTile{padding-bottom:5px;letter-spacing:4px;font-size:46px;font-weight:600}.brightMode{color:#0b0b13}.darkMode{color:#fff}@media(max-width:767px){.commonTile{letter-spacing:4px!important;font-size:30px!important}}
