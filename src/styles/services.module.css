@@ -1,10 +1,1 @@
-.skillBox{background:#2FBF71;height:103px;max-width:332px;width:100%;justify-content:center;align-items:center;display:flex;border-radius:7px;transition:.3s all ease-in-out;margin:7px 0}
-.skillBox:hover{background-color:rgba(0,255,28,0.4)}
-.darkMode:hover{background-color:red}
-.whatIdoType{transition:.3s all ease-in-out;color:#fff;font-size:20px;font-weight:600}
-.darkMode:hover .whatIdoType{color:#fff!important}
-.skillBox:hover .whatIdoType{color:#000}
-@media(max-width:767px) {
-.skillBox{height:71px;max-width:206px}
-.whatIdoType{font-size:17px}
-}
+.skillBox{background:#2FBF71;height:103px;max-width:332px;width:100%;justify-content:center;align-items:center;display:flex;border-radius:7px;transition:.3s all ease-in-out;margin:7px 0}.skillBox:hover{background-color:rgba(0,255,28,0.4)}.darkMode:hover{background-color:red}.whatIdoType{transition:.3s all ease-in-out;color:#fff;font-size:20px;font-weight:600}.darkMode:hover .whatIdoType{color:#fff!important}.skillBox:hover .whatIdoType{color:#000}@media(max-width:767px){.skillBox{height:71px;max-width:206px}.whatIdoType{font-size:17px}}

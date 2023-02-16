@@ -1,39 +1,16 @@
-import React from 'react'
-import useSWR from 'swr'
-import styles from '../styles/portfolio.module.css'
-import Image from 'next/image'
-import { Commontitle } from './commonTitle'
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-
+import React from 'react';import useSWR from 'swr';import styles from '../styles/portfolio.module.css';import Image from 'next/image';import { Commontitle } from './commonTitle';import { useState } from 'react';import { motion } from 'framer-motion'
 ;('use client')
 const fetcher = (url) => fetch(url).then((res) => res.json())
 function Portfolio({ modeToggler }) {
-    const[isOpen,setOpen]=useState(!0),[fullImage,setFullImage]=useState(),mainHeadingAnimation={offscreen:{opacity:0,x:-100},onscreen:{x:0,opacity:1}},itemVariants={open:{opacity:1,y:0,transition:{type:"spring",stiffness:300,damping:24}},closed:{opacity:0,y:20,transition:{duration:.2}}},openHander=e=>{setFullImage(e),setOpen(!1)},closeHander=()=>{setFullImage(),setOpen(!0)};
-    const { data, error } = useSWR('/api/portfolio', fetcher)
-    if (error) return <div>Failed to load</div>
-    if (!data) return <div>Loading...</div>
+    const[isOpen,setOpen]=useState(!0),[fullImage,setFullImage]=useState(),mainHeadingAnimation={offscreen:{opacity:0,x:-100},onscreen:{x:0,opacity:1}},itemVariants={open:{opacity:1,y:0,transition:{type:"spring",stiffness:300,damping:24}},closed:{opacity:0,y:20,transition:{duration:.2}}},openHander=e=>{setFullImage(e),setOpen(!1)},closeHander=()=>{setFullImage(),setOpen(!0)};const { data, error } = useSWR('/api/portfolio', fetcher);if (error) return <div>Failed to load</div>;if (!data) return <div>Loading...</div>
     return (
-        <motion.div
-            initial={'offscreen'}
-            whileInView={'onscreen'}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ staggerChildren: 0.1 }}
-        >
-            <Commontitle
-                mainHeadingAnimation={mainHeadingAnimation}
-                modeToggler={modeToggler}
-                title={data.Portfolio.title}
-                className="text-start"
-                icon={data.skills.arrowimg}
-            />
+        <motion.div initial={'offscreen'} whileInView={'onscreen'} viewport={{ once: true, amount: 0.1 }} transition={{ staggerChildren: 0.1 }} > <Commontitle mainHeadingAnimation={mainHeadingAnimation} modeToggler={modeToggler} title={data.Portfolio.title} className="text-start" icon={data.skills.arrowimg} />
             {isOpen ? (
                 <div className={`${styles.row} ${styles.portfolioContent}`}>
                     {data.Portfolio.images.map((items) => {
                         return (
                             <motion.div animate={itemVariants} key={Math.random()} className={styles.item}> <div className={styles.well}> <button style={{ border: 'transparent', width: '100%', background: 'transparent', }} onClick={(e) => { e.preventDefault(); openHander(items) }} > <Image priority={true} className={`${ modeToggler ? 'img-thumbnail' : styles.backgroundNone } ${styles.zoom}`} src={items.src} width={items.width} height={items.height} alt="PortFolio Images" /> </button> </div> </motion.div>
-                        )
-                    })}
+                        )})}
                 </div>
             ) : (
                 <>
@@ -41,7 +18,4 @@ function Portfolio({ modeToggler }) {
                 </>
             )}
         </motion.div>
-    )
-}
-
-export default Portfolio
+    )};export default Portfolio
