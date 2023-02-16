@@ -50,7 +50,6 @@
     background: #f7f7ff;
     top: 0;
     left: 0;
-    animation: aimationtogglesecond .3s both;
     padding: 63px 0 10px 0;
     bottom: 0;
     z-index: 999;
@@ -210,8 +209,4 @@
 @keyframes animationtoggle {
     from {left: -30px;}
     to {right: 0;}
-}
-@keyframes aimationtogglesecond {
-    from {right: 0;}
-    to {left: 0;}
 }

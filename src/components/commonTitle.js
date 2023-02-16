@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from "../styles/common.module.css"
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export  const  Commontitle = ({title, icon,modeToggler,mainHeadingAnimation}) => {
   return (

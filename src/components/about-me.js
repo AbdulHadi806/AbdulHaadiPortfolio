@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import Image from 'next/image'
 import styles from '../styles/aboutme.module.css'
 import { Commontitle } from './commonTitle'
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())

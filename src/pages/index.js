@@ -12,8 +12,8 @@ import Contactme from '@/components/contact-me'
 import ClipLoader from 'react-spinners/ClipLoader'
 import useSWR from 'swr'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-;import Separation from '@/components/commonTitle'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Separation from '@/components/commonTitle'
 ('use client')
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,7 +24,6 @@ export default function Home() {
     const [modeToggler, setModeToggler] = useState(true)
     const [clickCss, setClickCss] = useState(false)
     const { data, error } = useSWR('/api/portfolio', fetcher)
-
     const setToggelerChangeHandler = () => {
         setToggeler((prevCheck) => !prevCheck)
     }
@@ -90,9 +89,9 @@ export default function Home() {
                 </button>
             </div>
             <div className="row justify-content-center">
-                <div
+                <div initial={false}
                     className={`g-0 col-8 col-sm-5 col-md-4 col-lg-3  col-xl-2 col-xxl-2 position-fixed ${
-                        modeToggler ? '' : styles.sideBarBgChanger
+                        modeToggler ? '' : styles.sideBarBgChanger 
                     } ${toggler ? styles.sideBarOuter : styles.responsiveNav}`}
                 >
                     <SideBar modeToggler={modeToggler} />

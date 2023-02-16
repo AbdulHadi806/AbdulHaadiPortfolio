@@ -4,7 +4,7 @@ import styles from '../styles/portfolio.module.css'
 import Image from 'next/image'
 import { Commontitle } from './commonTitle'
 import { useState } from 'react'
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 ;('use client')
 const fetcher = (url) => fetch(url).then((res) => res.json())

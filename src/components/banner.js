@@ -3,7 +3,7 @@ import useSWR from 'swr'
 import React, { useEffect, useState } from 'react'
 import styles from '../styles/banner.module.css'
 import TextTransition, { presets } from 'react-text-transition'
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
@@ -83,7 +83,7 @@ function Banner({ modeToggler }) {
         <div className={`row text-start ${styles.reverseDirectionMobile}`}>
             <motion.div initial={'offscreen'}
                     whileInView={'onscreen'}
-                    viewport={{ once: true, amount: 0.1 }}
+                    viewport={{ once: true, amount: 0.4 }}
                     transition={{ staggerChildren: 0.5 }} className={`col-md-6  ${styles.leftSide}`}>
                 <motion.h1
                     className={`${modeToggler ? '' : styles.darkMode} ${

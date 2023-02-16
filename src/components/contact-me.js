@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { sendContactForm } from 'lib/api'
 import { Alertbox1, Alertbox2 } from './alertbox'
 import ClipLoader from 'react-spinners/ClipLoader'
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 ('use client')
 

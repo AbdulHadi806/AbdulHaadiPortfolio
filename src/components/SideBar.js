@@ -85,7 +85,7 @@ function SideBar({ modeToggler }) {
                     smooth={true}
                     offset={-70}
                     duration={500}>
-              <Image
+              <Image priority={false}
                 src="/images/profile-logo.png"
                 alt="Abdul Hadi"
                 width={110}
