@@ -133,8 +133,6 @@
     .sideBar_top {
         padding: 0 0 20px
     }
-}
-@media screen and (max-height: 638px) {
     .navigationList {
         line-height: 50px;
     font-size: 13px;
