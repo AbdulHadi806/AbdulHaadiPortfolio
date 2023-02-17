@@ -14,7 +14,7 @@ function Portfolio({ modeToggler }) {
                 </div>
             ) : (
                 <>
-                    <button className="position-relative" style={{ border: 'transparent', backgroundColor: 'transparent', }} onClick={closeHander} > <Image priority={true} width={700} height={700} className={styles.fullscreenImg} src={fullImage.src} alt="portfolio-fullscreen" /> <span className={styles.animatedOverlayTxt}>Close</span> </button>
+                    <button className="position-relative" style={{ border: 'transparent', backgroundColor: 'transparent',width:"407px" }} onClick={closeHander} > <Image priority={true} width={700} height={700} className={styles.fullscreenImg} src={fullImage.src} alt="portfolio-fullscreen" /> <span className={styles.animatedOverlayTxt}>Close</span> </button>
                 </>
             )}
         </motion.div>
