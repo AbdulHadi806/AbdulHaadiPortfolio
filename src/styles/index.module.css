@@ -93,8 +93,8 @@
 }
 
 .bounce {
-    font-size: 42px;
-    color: #fff;
+    font-size: 33px;
+        color: #fff;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -273,8 +273,8 @@
     font-size: 30px;
     border: 1px solid #fff;
     padding: 7px;
-    width: 60px;
-    height: 59px;
+    width: 47px;
+    height: 48px;
     animation: modeButton 2s ease infinite;
     border-radius: 43px;
     background-color: #000;
