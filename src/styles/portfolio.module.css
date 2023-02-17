@@ -1,1 +1,85 @@
-.row{-moz-column-width:18em;-webkit-column-width:18em;column-width:18em;-moz-column-gap:1em;-webkit-column-gap:1em;column-gap:1em}.item:hover{transform:scale(1.2);position:relative}.item{display:inline-block;max-width:400px;transition:transform .2s;margin:7px auto;z-index:9;width:100%}.well{position:relative;display:block}.animatedOverlayTxt{background-color:#2FBF71;width:66px;height:33px;position:absolute;display:inline-block;right:0;font-size:14px;line-height:31px;color:#fff;border:1px solid transparent;transition:.2s all ease-in-out}.animatedOverlayTxt:hover{background-color:transparent;background:#000}.fullscreenImg{width:100%!important;height:initial!important;object-fit:contain}.backgroundNone{width:100%;height:auto;background-color:#000!important;border:transparent!important;border-radius:3px;padding:initial!important}@media (max-width: 1500px){.row{column-width:13em}}@media(max-width:767px){.item{max-width:314px}.row{column-width:9em}}
+.row {
+    -moz-column-width: 18em;
+    -webkit-column-width: 18em;
+    column-width: 18em;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em
+}
+
+.item:hover {
+    transform: scale(1.2);
+    position: relative
+}
+
+.item {
+    display: inline-block;
+    max-width: 400px;
+    transition: transform .2s;
+    margin: 7px auto;
+    z-index: 9;
+    width: 100%
+}
+
+.well {
+    position: relative;
+    display: block
+}
+
+.animatedOverlayTxt {
+    background-color: #2FBF71;
+    width: 66px;
+    height: 33px;
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    font-size: 14px;
+    line-height: 31px;
+    color: #fff;
+    border: 1px solid transparent;
+    transition: .2s all ease-in-out
+}
+
+.animatedOverlayTxt:hover {
+    background-color: transparent;
+    background: #000
+}
+
+.fullscreenImg {
+    width: 100% !important;
+    height: initial !important;
+    object-fit: contain
+}
+
+.backgroundNone {
+    width: 100%;
+    height: auto;
+    background-color: #000 !important;
+    border: transparent !important;
+    border-radius: 3px;
+    padding: initial !important
+}
+@media (min-width: 1500px) {
+    .row {
+        column-width: 21em
+    }
+}
+
+@media (max-width: 1500px) {
+    .row {
+        column-width: 15em
+    }
+}
+
+@media(max-width:992px) {
+    .row { column-width: 14em; }
+}
+@media(max-width:767px) {
+    .item {
+        max-width: 314px
+    }
+
+    .row {
+        column-width: 11em;
+    }
+}
