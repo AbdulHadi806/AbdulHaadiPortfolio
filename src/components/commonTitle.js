@@ -10,7 +10,5 @@ export const Experince = ({Width}) => {
   )
 }
 export default function Separation({separationDarkMode,stylesDefault,modeToggler}) {
-  return (
-    <div className={`${modeToggler ? "": separationDarkMode} ${stylesDefault} `}></div>
-  )
+  return ( <div className={`${modeToggler ? "": separationDarkMode} ${stylesDefault} `}></div>)
 }
