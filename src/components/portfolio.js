@@ -3,19 +3,4 @@ import React from 'react';import useSWR from 'swr';import styles from '../styles
 const fetcher = (url) => fetch(url).then((res) => res.json())
 function Portfolio({ modeToggler }) {
     const[isOpen,setOpen]=useState(!0),[fullImage,setFullImage]=useState(),mainHeadingAnimation={offscreen:{opacity:0,x:-50},onscreen:{x:0,opacity:1}},openHander=e=>{setFullImage(e),setOpen(!1)},closeHander=()=>{setFullImage(),setOpen(!0)};const { data, error } = useSWR('/api/portfolio', fetcher);if (error) return <div>Failed to load</div>;if (!data) return <div>Loading...</div>
-    return (
-        <motion.div initial={'offscreen'} whileInView={'onscreen'} viewport={{ once: true, amount: 0.1 }} transition={{ staggerChildren: 0.1 }} > <Commontitle mainHeadingAnimation={mainHeadingAnimation} modeToggler={modeToggler} title={data.Portfolio.title} className="text-start" icon={data.skills.arrowimg} />
-            {isOpen ? (
-                <div className={`${styles.row} ${styles.portfolioContent}`}>
-                    {data.Portfolio.images.map((items) => {
-                        return (
-                            <motion.div key={Math.random()} className={styles.item}> <div className={styles.well}> <button style={{ border: 'transparent', width: '100%', background: 'transparent', }} onClick={(e) => { e.preventDefault(); openHander(items) }} > <Image priority={true} className={`${ modeToggler ? 'img-thumbnail' : styles.backgroundNone } ${styles.zoom}`} src={items.src} width={items.width} height={items.height} alt="PortFolio Images" /> </button> </div> </motion.div>
-                        )})}
-                </div>
-            ) : (
-                <>
-                    <button className="position-relative" style={{ border: 'transparent', backgroundColor: 'transparent',width:"407px" }} onClick={closeHander} > <Image priority={true} width={700} height={700} className={styles.fullscreenImg} src={fullImage.src} alt="portfolio-fullscreen" /> <span className={styles.animatedOverlayTxt}>Close</span> </button>
-                </>
-            )}
-        </motion.div>
-    )};export default Portfolio
+    return (<motion.div initial={'offscreen'} whileInView={'onscreen'} viewport={{ once: true, amount: 0.1 }} transition={{ staggerChildren: 0.1 }} > <Commontitle mainHeadingAnimation={mainHeadingAnimation} modeToggler={modeToggler} title={data.Portfolio.title} className="text-start" icon={data.skills.arrowimg} />{isOpen ? (<div className={`${styles.row} ${styles.portfolioContent}`}>{data.Portfolio.images.map((items) => {return (<motion.div key={Math.random()} className={styles.item}> <div className={styles.well}> <button style={{ border: 'transparent', width: '100%', background: 'transparent', }} onClick={(e) => { e.preventDefault(); openHander(items) }} > <Image priority={true} className={`${ modeToggler ? 'img-thumbnail' : styles.backgroundNone } ${styles.zoom}`} src={items.src} width={items.width} height={items.height} alt="PortFolio Images" /> </button> </div> </motion.div>)})}</div>) : (<><button className="position-relative" style={{ border: 'transparent', backgroundColor: 'transparent',width:"407px" }} onClick={closeHander} > <Image priority={true} width={700} height={700} className={styles.fullscreenImg} src={fullImage.src} alt="portfolio-fullscreen" /> <span className={styles.animatedOverlayTxt}>Close</span> </button></>)}</motion.div>)};export default Portfolio
