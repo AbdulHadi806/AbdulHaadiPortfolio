@@ -3,7 +3,7 @@
     "titleMain": "ABOUT ME.",
     "titleSecondary": "Empower your web identity with me.",
     "description": "I am an experienced Full-stack Web Developer. I am from Pakistan. I Freelance on Upwork and Fiverr. I code and create web elements for amazing people around the world. I like to work with new people. New people new Experiences.",
-    "contactBtn": "Contact Me", // Fixed the missing colon here
+    "contactBtn": "Contact Me",
     "portfolioBtn": "Portfolio",
     "arrowimg": "/images/Arrow-aboutUS.png",
     "img1": "/images/aboutme.png"
@@ -65,10 +65,10 @@
   "ContactMe": {
     "ContactMeTitle": "GET IN TOUCH.",
     "ContactRightBox": {
-      "ContactBoxIntro": "What’s your story? \n Lets Discuss",
+      "ContactBoxIntro": "What’s your story? Let's Discuss",
       "ContactBoxDesc": "Always available for freelancing if the right project comes along, Feel free to contact me.",
       "Email": "mailto:abdul.806@yahoo.com",
-      "location": "Model Town,\nIslamabad, Pakistan"
+      "location": "Model Town, Islamabad, Pakistan"
     }
   }
 }
